@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Mimorales073/dymiec
   branch: main
+  site_url: https://dymiec.netlify.app
 
 media_folder: "images"
 public_folder: "/images"
