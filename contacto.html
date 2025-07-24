@@ -21,6 +21,11 @@
     <li><a href="contacto.html">Contacto</a></li>
     <li><a href="historia.html">Historia</a></li>
   </ul>
+
+    <div class="language-switcher" style="text-align:right; padding: 10px;">
+        <a href="contacto.html">🇲🇽 Español</a> | <a href="contacto-en.html">🇬🇧 English</a>
+    </div>
+
 </nav>
   </header>
 
@@ -63,5 +68,14 @@
   <a href="https://mail.google.com/mail/?view=cm&to=mmdymiec@outlook.es" target="_blank" class="btn-float email" title="Correo">
     <img src="images/email.png" alt="Correo">
   </a>
+  <script>
+  document.querySelector("form").addEventListener("submit", function(e) {
+    const response = grecaptcha.getResponse();
+    if (response.length === 0) {
+      e.preventDefault();
+      alert("Por favor confirma que no eres un robot.");
+    }
+  });
+</script>
 </body>
 </html>
