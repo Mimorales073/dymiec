@@ -1,7 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Mimorales073/dymiec
   branch: main
-  site_url: https://dymiec.com.mx
+  site_domain: dymiec.com.mx
 
 media_folder: "images"
 public_folder: "/images"
