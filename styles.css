@@ -243,3 +243,31 @@ body::before {
   font-size: 16px;
   line-height: 1.6;
 }
+.formulario-contacto {
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.formulario-contacto button {
+  padding: 10px 20px;
+  background-color: #FFD700;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.formulario-contacto button:hover {
+  background-color: #e0bb00;
+}
