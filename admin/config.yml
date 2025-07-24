@@ -2,7 +2,8 @@ backend:
   name: github
   repo: Mimorales073/dymiec
   branch: main
-  site_url: https://dymiec.netlify.app
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
 
 media_folder: "images"
 public_folder: "/images"
