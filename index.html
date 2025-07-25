@@ -10,34 +10,38 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
   <header>
     <img src="images/logo-dymiec.png" alt="Logo DYMIEC" style="height: 180px;">
-    <nav>
-  <ul>
-<li><a href="inicio.html">Inicio</a></li>
-<li><a href="servicios.html">Servicios</a></li>
-<li><a href="nosotros.html">Nosotros</a></li>
-<li><a href="experiencia.html">Experiencia</a></li>
-<li><a href="ubicacion.html">Ubicación</a></li>
-<li><a href="contacto.html">Contacto</a></li>
-<li><a href="historia.html">Historia</a></li>
-<li><a href="clientes.html">Clientes</a></li>
-<li><a href="blog.html">Blog</a></li>
-  </ul>
 
+    <!-- Botón hamburguesa (visible solo en móviles) -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-    <div class="language-switcher" style="text-align:right; padding: 10px;">
-        <a href="index.html">🇲🇽 Español</a> | <a href="index-en.html">🇬🇧 English</a>
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="experiencia.html">Experiencia</a></li>
+        <li><a href="ubicacion.html">Ubicación</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="clientes.html">Clientes</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+
+    <!-- Cambiador de idioma -->
+    <div class="language-switcher">
+      <a href="index.html">🇲🇽 Español</a> | <a href="index-en.html">🇬🇧 English</a>
     </div>
-
-</nav>
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
   </header>
 
- <section id="inicio">
+  <section id="inicio">
     <h2>¿Quiénes somos?</h2>
     <p>DYMIEC S.A. de C.V. (Distribución y Mantenimiento para la Industria del Espectáculo y la Construcción) es una empresa mexicana ubicada en Ciudad de México.</p>
-    <p>Contamos con amplia experiencia en logística, soporte técnico y renta de equipo especializado para conciertos, construcciones, estructuras escénicas, distribucion de materiales, entre muchas otras cosas.</p>
+    <p>Contamos con amplia experiencia en logística, soporte técnico y renta de equipo especializado para conciertos, construcciones, estructuras escénicas, distribución de materiales, entre muchas otras cosas.</p>
     <p>Nuestro compromiso es brindar calidad, seguridad y eficiencia en cada proyecto.</p>
   </section>
 
@@ -57,10 +61,11 @@
   <a href="https://mail.google.com/mail/?view=cm&to=mmdymiec@outlook.es" target="_blank" class="btn-float email" title="Correo">
     <img src="images/email.png" alt="Correo">
   </a>
- <script>
-  function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('show');
-  }
-</script>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
