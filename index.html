@@ -10,38 +10,33 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
   <header>
     <img src="images/logo-dymiec.png" alt="Logo DYMIEC" style="height: 180px;">
+    <nav>
+  <ul>
+<li><a href="inicio.html">Inicio</a></li>
+<li><a href="servicios.html">Servicios</a></li>
+<li><a href="nosotros.html">Nosotros</a></li>
+<li><a href="experiencia.html">Experiencia</a></li>
+<li><a href="ubicacion.html">Ubicación</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+<li><a href="historia.html">Historia</a></li>
+<li><a href="clientes.html">Clientes</a></li>
+<li><a href="blog.html">Blog</a></li>
+  </ul>
 
-    <!-- Botón hamburguesa -->
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
 
-    <!-- Menú de navegación -->
-    <nav class="navbar">
-      <ul class="nav-links">
-        <li><a href="inicio.html" onclick="closeMenu()">Inicio</a></li>
-        <li><a href="servicios.html" onclick="closeMenu()">Servicios</a></li>
-        <li><a href="nosotros.html" onclick="closeMenu()">Nosotros</a></li>
-        <li><a href="experiencia.html" onclick="closeMenu()">Experiencia</a></li>
-        <li><a href="ubicacion.html" onclick="closeMenu()">Ubicación</a></li>
-        <li><a href="contacto.html" onclick="closeMenu()">Contacto</a></li>
-        <li><a href="historia.html" onclick="closeMenu()">Historia</a></li>
-        <li><a href="clientes.html" onclick="closeMenu()">Clientes</a></li>
-        <li><a href="blog.html" onclick="closeMenu()">Blog</a></li>
-      </ul>
-    </nav>
-
-    <!-- Selector de idioma alineado a la derecha -->
-    <div class="language-switcher">
-      <a href="index.html">🇲🇽 Español</a> | <a href="index-en.html">🇬🇧 English</a>
+    <div class="language-switcher" style="text-align:right; padding: 10px;">
+        <a href="index.html">🇲🇽 Español</a> | <a href="index-en.html">🇬🇧 English</a>
     </div>
+
+</nav>
   </header>
 
-  <section id="inicio">
+ <section id="inicio">
     <h2>¿Quiénes somos?</h2>
     <p>DYMIEC S.A. de C.V. (Distribución y Mantenimiento para la Industria del Espectáculo y la Construcción) es una empresa mexicana ubicada en Ciudad de México.</p>
-    <p>Contamos con amplia experiencia en logística, soporte técnico y renta de equipo especializado para conciertos, construcciones, estructuras escénicas, distribución de materiales, entre muchas otras cosas.</p>
+    <p>Contamos con amplia experiencia en logística, soporte técnico y renta de equipo especializado para conciertos, construcciones, estructuras escénicas, distribucion de materiales, entre muchas otras cosas.</p>
     <p>Nuestro compromiso es brindar calidad, seguridad y eficiencia en cada proyecto.</p>
   </section>
 
@@ -61,19 +56,5 @@
   <a href="https://mail.google.com/mail/?view=cm&to=mmdymiec@outlook.es" target="_blank" class="btn-float email" title="Correo">
     <img src="images/email.png" alt="Correo">
   </a>
-
-  <!-- Scripts del menú -->
-  <script>
-    function toggleMenu() {
-      document.querySelector('.nav-links').classList.toggle('show');
-    }
-
-    function closeMenu() {
-      const menu = document.querySelector('.nav-links');
-      if (menu.classList.contains('show')) {
-        menu.classList.remove('show');
-      }
-    }
-  </script>
 </body>
 </html>
