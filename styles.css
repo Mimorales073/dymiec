@@ -271,3 +271,7 @@ body::before {
 .formulario-contacto button:hover {
   background-color: #e0bb00;
 }
+.language-switcher {
+  text-align: right;
+  padding: 10px;
+}
