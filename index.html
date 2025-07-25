@@ -31,6 +31,9 @@
     </div>
 
 </nav>
+  <div class="hamburger" onclick="toggleMenu()">
+    &#9776;
+  </div>
   </header>
 
  <section id="inicio">
@@ -56,5 +59,11 @@
   <a href="https://mail.google.com/mail/?view=cm&to=mmdymiec@outlook.es" target="_blank" class="btn-float email" title="Correo">
     <img src="images/email.png" alt="Correo">
   </a>
+  <script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show');
+  }
+</script>
 </body>
 </html>
