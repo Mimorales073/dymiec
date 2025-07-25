@@ -199,12 +199,12 @@ body::before {
   height: 80px;
   max-width: 100%;
   object-fit: contain;
-  filter: none; /* Siempre a color */
+  filter: none !important;
   transition: transform 0.3s;
 }
 
 .clientes-grid .item img:hover {
-  transform: scale(1.1); /* Efecto de agrandamiento */
+  transform: scale(1.1);
 }
 
 @media (max-width: 600px) {
