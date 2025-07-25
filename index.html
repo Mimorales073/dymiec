@@ -14,25 +14,25 @@
   <header>
     <img src="images/logo-dymiec.png" alt="Logo DYMIEC" style="height: 180px;">
 
-    <!-- Botón hamburguesa (visible solo en móviles) -->
+    <!-- Botón hamburguesa -->
     <div class="hamburger" onclick="toggleMenu()">☰</div>
 
     <!-- Menú de navegación -->
     <nav class="navbar">
       <ul class="nav-links">
-        <li><a href="inicio.html">Inicio</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="experiencia.html">Experiencia</a></li>
-        <li><a href="ubicacion.html">Ubicación</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="historia.html">Historia</a></li>
-        <li><a href="clientes.html">Clientes</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="inicio.html" onclick="closeMenu()">Inicio</a></li>
+        <li><a href="servicios.html" onclick="closeMenu()">Servicios</a></li>
+        <li><a href="nosotros.html" onclick="closeMenu()">Nosotros</a></li>
+        <li><a href="experiencia.html" onclick="closeMenu()">Experiencia</a></li>
+        <li><a href="ubicacion.html" onclick="closeMenu()">Ubicación</a></li>
+        <li><a href="contacto.html" onclick="closeMenu()">Contacto</a></li>
+        <li><a href="historia.html" onclick="closeMenu()">Historia</a></li>
+        <li><a href="clientes.html" onclick="closeMenu()">Clientes</a></li>
+        <li><a href="blog.html" onclick="closeMenu()">Blog</a></li>
       </ul>
     </nav>
 
-    <!-- Cambiador de idioma -->
+    <!-- Selector de idioma alineado a la derecha -->
     <div class="language-switcher">
       <a href="index.html">🇲🇽 Español</a> | <a href="index-en.html">🇬🇧 English</a>
     </div>
@@ -62,9 +62,17 @@
     <img src="images/email.png" alt="Correo">
   </a>
 
+  <!-- Scripts del menú -->
   <script>
     function toggleMenu() {
       document.querySelector('.nav-links').classList.toggle('show');
+    }
+
+    function closeMenu() {
+      const menu = document.querySelector('.nav-links');
+      if (menu.classList.contains('show')) {
+        menu.classList.remove('show');
+      }
     }
   </script>
 </body>
