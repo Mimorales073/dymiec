@@ -65,5 +65,17 @@
   <a href="https://mail.google.com/mail/?view=cm&to=mmdymiec@outlook.es" target="_blank" class="btn-float email" title="Email">
     <img src="images/email.png" alt="Email">
   </a>
+  <script>
+  // Forzar un "repaint" del menú después de cargar
+  window.addEventListener('DOMContentLoaded', () => {
+    const nav = document.querySelector("nav");
+    if (nav) {
+      nav.style.display = "none";
+      setTimeout(() => {
+        nav.style.display = "block";
+      }, 10);
+    }
+  });
+</script>
 </body>
 </html>
