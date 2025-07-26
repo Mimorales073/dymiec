@@ -7,7 +7,6 @@
 <meta content="Experts in maintenance and construction in CDMX." name="description"/>
 <title>Home | DYMIEC</title>
 <link href="styles.css" rel="stylesheet"/>
-
 <style>
   .hamburger {
     display: none;
@@ -52,7 +51,7 @@
 </head>
 <body>
 <header>
-<img alt="DYMIEC Logo" src="images/logo-dymiec.png" style="height: 180px;"/>
+<a href="inicio-en.html"><img alt="DYMIEC Logo" src="images/logo-dymiec.png" style="height: 180px;"/></a>
 <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div><nav>
 <ul>
 <li><a href="index-en.html">Home</a></li>
@@ -96,7 +95,6 @@
     items.forEach(el => el.style.display = "list-item");
   });
 </script>
-
 <script>
   function toggleMenu() {
     const navList = document.querySelector('nav ul');

@@ -6,7 +6,6 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Inicio | DYMIEC</title>
 <link href="styles.css" rel="stylesheet"/>
-
 <style>
   .hamburger {
     display: none;
@@ -51,7 +50,7 @@
 </head>
 <body>
 <header>
-<img alt="Logo DYMIEC" src="images/logo-dymiec.png" style="height: 180px;"/>
+<a href="inicio.html"><img alt="Logo DYMIEC" src="images/logo-dymiec.png" style="height: 180px;"/></a>
 <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div><nav>
 <ul>
 <li><a href="inicio.html">Inicio</a></li>
@@ -80,15 +79,14 @@
 </footer>
 <!-- Botones flotantes -->
 <a class="btn-float whatsapp" href="https://wa.me/5563015941" target="_blank" title="WhatsApp">
-<img alt="WhatsApp" src="images/whatsapp.png">
-</img></a>
+<img alt="WhatsApp" src="images/whatsapp.png"/>
+</a>
 <a class="btn-float call" href="tel:5563015941" title="Llamar">
 <img alt="Llamar" src="images/phone.png"/>
 </a>
 <a class="btn-float email" href="https://mail.google.com/mail/?view=cm&amp;to=mmdymiec@outlook.es" target="_blank" title="Correo">
 <img alt="Correo" src="images/email.png"/>
 </a>
-
 <script>
   function toggleMenu() {
     const navList = document.querySelector('nav ul');
