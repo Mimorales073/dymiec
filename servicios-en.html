@@ -1,17 +1,60 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | DYMIEC</title>
-  <meta name="description" content="Learn more about our maintenance and construction services in Mexico City.">
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services | DYMIEC</title>
+<meta content="Learn more about our maintenance and construction services in Mexico City." name="description"/>
+<link href="styles.css" rel="stylesheet"/>
+
+<style>
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: black;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      z-index: 998;
+    }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+</style>
 </head>
 <body>
-  <header>
-    <img src="images/logo-dymiec.png" alt="DYMIEC Logo" style="height: 180px;">
-<nav>
-      <ul>
+<header>
+<img alt="DYMIEC Logo" src="images/logo-dymiec.png" style="height: 180px;"/>
+<div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div><nav>
+<ul>
 <li><a href="index-en.html">Home</a></li>
 <li><a href="servicios-en.html">Services</a></li>
 <li><a href="nosotros-en.html">About Us</a></li>
@@ -21,74 +64,85 @@
 <li><a href="historia-en.html">History</a></li>
 <li><a href="clientes-en.html">Clients</a></li>
 <li><a href="blog-en.html">Blog</a></li>
-      </ul>
-  <div class="language-switcher">
-    <a href="servicios.html">🇲🇽 Español</a> |
+</ul>
+<div class="language-switcher">
+<a href="servicios.html">🇲🇽 Español</a> |
     <a href="servicios-en.html">🇬🇧 English</a>
-  </div>
+</div>
 </nav>
-  </header>
-
-  <section>
-  <h2>Our Services</h2>
-  <p>At DYMIEC, we offer a wide range of services to meet our clients' needs. Below is a list of what we provide:</p>
-
-  <h2>CONSTRUCTION</h2>
-  <ul>
-    <li>Finishes.</li>
-    <li>Flooring: ceramic, marble, cantera stone, wood flooring, etc.</li>
-    <li>Drywall (Tablaroca), Durock.</li>
-    <li>Painting: vinyl, enamel, epoxy, etc.</li>
-    <li>Ceilings (plafón).</li>
-    <li>Carpentry: doors, closets, kitchens, etc.</li>
-    <li>Masonry: walls, foundations, slabs, plastering.</li>
-    <li>Septic tanks, manholes, wells.</li>
-    <li>Buildings.</li>
-    <li>Construction supervision.</li>
-    <li>Architecture, project development, structural calculations.</li>
-    <li>Hydraulic, sanitary, natural gas and LP systems.</li>
-    <li>Remodeling.</li>
-    <li>Structural engineer and DRO (Responsible for Structural Safety).</li>
-    <li>Metal fabrication.</li>
-  </ul>
-
-  <h2>COMPREHENSIVE INDUSTRIAL SERVICES</h2>
-  <ul>
-    <li>Detail Cleaning.</li>
-    <li>Industrial Waste Cleaning.</li>
-    <li>Air Conditioning: Maintenance, Design, and Installation.</li>
-    <li>Maintenance of emergency power plants.</li>
-    <li>Fumigation.</li>
-    <li>Closed-Circuit Television (CCTV).</li>
-    <li>Lightning rods.</li>
-    <li>Ironwork.</li>
-  </ul>
-
-  <h2>LEGAL FRAMEWORK & ADMINISTRATIVE SERVICES</h2>
-  <ul>
-    <li>Civil Protection Folder.</li>
-    <li>Seismic Alarm Systems.</li>
-    <li>Contingency Plan.</li>
-    <li>Smoke Detection Systems.</li>
-    <li>Evacuation Route Signage.</li>
-  </ul>
+</header>
+<section>
+<h2>Our Services</h2>
+<p>At DYMIEC, we offer a wide range of services to meet our clients' needs. Below is a list of what we provide:</p>
+<h2>CONSTRUCTION</h2>
+<ul>
+<li>Finishes.</li>
+<li>Flooring: ceramic, marble, cantera stone, wood flooring, etc.</li>
+<li>Drywall (Tablaroca), Durock.</li>
+<li>Painting: vinyl, enamel, epoxy, etc.</li>
+<li>Ceilings (plafón).</li>
+<li>Carpentry: doors, closets, kitchens, etc.</li>
+<li>Masonry: walls, foundations, slabs, plastering.</li>
+<li>Septic tanks, manholes, wells.</li>
+<li>Buildings.</li>
+<li>Construction supervision.</li>
+<li>Architecture, project development, structural calculations.</li>
+<li>Hydraulic, sanitary, natural gas and LP systems.</li>
+<li>Remodeling.</li>
+<li>Structural engineer and DRO (Responsible for Structural Safety).</li>
+<li>Metal fabrication.</li>
+</ul>
+<h2>COMPREHENSIVE INDUSTRIAL SERVICES</h2>
+<ul>
+<li>Detail Cleaning.</li>
+<li>Industrial Waste Cleaning.</li>
+<li>Air Conditioning: Maintenance, Design, and Installation.</li>
+<li>Maintenance of emergency power plants.</li>
+<li>Fumigation.</li>
+<li>Closed-Circuit Television (CCTV).</li>
+<li>Lightning rods.</li>
+<li>Ironwork.</li>
+</ul>
+<h2>LEGAL FRAMEWORK &amp; ADMINISTRATIVE SERVICES</h2>
+<ul>
+<li>Civil Protection Folder.</li>
+<li>Seismic Alarm Systems.</li>
+<li>Contingency Plan.</li>
+<li>Smoke Detection Systems.</li>
+<li>Evacuation Route Signage.</li>
+</ul>
 </section>
+<footer>
+<p>© 2025 DYMIEC. All rights reserved.</p>
+</footer>
+<!-- Floating Buttons -->
+<a class="btn-float whatsapp" href="https://wa.me/5563015941" target="_blank" title="WhatsApp">
+<img alt="WhatsApp" src="images/whatsapp.png">
+</img></a>
+<a class="btn-float call" href="tel:5563015941" title="Call">
+<img alt="Call" src="images/phone.png"/>
+</a>
+<a class="btn-float email" href="https://mail.google.com/mail/?view=cm&amp;to=mmdymiec@outlook.es" target="_blank" title="Email">
+<img alt="Email" src="images/email.png"/>
+</a>
 
+<script>
+  function toggleMenu() {
+    const navList = document.querySelector('nav ul');
+    navList.classList.toggle('show');
+  }
 
-  <footer>
-    <p>© 2025 DYMIEC. All rights reserved.</p>
-  </footer>
-
-  <!-- Floating Buttons -->
-  <a href="https://wa.me/5563015941" class="btn-float whatsapp" target="_blank" title="WhatsApp">
-    <img src="images/whatsapp.png" alt="WhatsApp" />
-  </a>
-  <a href="tel:5563015941" class="btn-float call" title="Call">
-    <img src="images/phone.png" alt="Call" />
-  </a>
-  <a href="https://mail.google.com/mail/?view=cm&to=mmdymiec@outlook.es" target="_blank" class="btn-float email" title="Email">
-    <img src="images/email.png" alt="Email" />
-  </a>
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("nav ul li a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        const navList = document.querySelector("nav ul");
+        if (navList.classList.contains("show")) {
+          navList.classList.remove("show");
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>
-

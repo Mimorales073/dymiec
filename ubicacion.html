@@ -1,16 +1,59 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ubicación | DYMIEC</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ubicación | DYMIEC</title>
+<link href="styles.css" rel="stylesheet"/>
+
+<style>
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: black;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      z-index: 998;
+    }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+</style>
 </head>
 <body>
-  <header>
-    <img src="images/logo-dymiec.png" alt="Logo DYMIEC" style="height: 180px;">
-  <nav>
-  <ul>
+<header>
+<img alt="Logo DYMIEC" src="images/logo-dymiec.png" style="height: 180px;"/>
+<div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div><nav>
+<ul>
 <li><a href="inicio.html">Inicio</a></li>
 <li><a href="servicios.html">Servicios</a></li>
 <li><a href="nosotros.html">Nosotros</a></li>
@@ -20,44 +63,51 @@
 <li><a href="historia.html">Historia</a></li>
 <li><a href="clientes.html">Clientes</a></li>
 <li><a href="blog.html">Blog</a></li>
-  </ul>
-
-  
-    <div class="language-switcher" style="text-align:right; padding: 10px;">
-        <a href="ubicacion.html">🇲🇽 Español</a> | <a href="ubicacion-en.html">🇬🇧 English</a>
-    </div>
-  </nav>
-  </header>
-
-  <section id="ubicacion" style="padding: 40px 20px;">
-    <h2 style="text-align: left;">Dónde nos encontramos</h2>
-    <p>2a de Jalisco 33-2, Reforma Política, Iztapalapa, 09730 Ciudad de México, CDMX, México.</p>
-    <div style="margin-top: 20px;">
-<iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.7277629657556!2d-99.0300103257413!3d19.33761604370939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce032b561e2873%3A0xe7bd214bde4f0210!2sDYMIEC%20S.A.%20DE%20C.V.!5e0!3m2!1ses-419!2smx!4v1753426173364!5m2!1ses-419!2smx" 
-  width="100%" 
-  height="400" 
-  style="border:0;" 
-  allowfullscreen="" 
-  loading="lazy" 
-  referrerpolicy="no-referrer-when-downgrade">
+</ul>
+<div class="language-switcher" style="text-align:right; padding: 10px;">
+<a href="ubicacion.html">🇲🇽 Español</a> | <a href="ubicacion-en.html">🇬🇧 English</a>
+</div>
+</nav>
+</header>
+<section id="ubicacion" style="padding: 40px 20px;">
+<h2 style="text-align: left;">Dónde nos encontramos</h2>
+<p>2a de Jalisco 33-2, Reforma Política, Iztapalapa, 09730 Ciudad de México, CDMX, México.</p>
+<div style="margin-top: 20px;">
+<iframe allowfullscreen="" height="400" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.7277629657556!2d-99.0300103257413!3d19.33761604370939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce032b561e2873%3A0xe7bd214bde4f0210!2sDYMIEC%20S.A.%20DE%20C.V.!5e0!3m2!1ses-419!2smx!4v1753426173364!5m2!1ses-419!2smx" style="border:0;" width="100%">
 </iframe>
-    </div>
-  </section>
+</div>
+</section>
+<footer>
+<p>© 2025 DYMIEC. Todos los derechos reservados.</p>
+</footer>
+<!-- Botones flotantes -->
+<a class="btn-float whatsapp" href="https://wa.me/5563015941" target="_blank" title="WhatsApp">
+<img alt="WhatsApp" src="images/whatsapp.png">
+</img></a>
+<a class="btn-float call" href="tel:5563015941" title="Llamar">
+<img alt="Llamar" src="images/phone.png"/>
+</a>
+<a class="btn-float email" href="https://mail.google.com/mail/?view=cm&amp;to=mmdymiec@outlook.es" target="_blank" title="Correo">
+<img alt="Correo" src="images/email.png"/>
+</a>
 
-  <footer>
-    <p>© 2025 DYMIEC. Todos los derechos reservados.</p>
-  </footer>
+<script>
+  function toggleMenu() {
+    const navList = document.querySelector('nav ul');
+    navList.classList.toggle('show');
+  }
 
-  <!-- Botones flotantes -->
-  <a href="https://wa.me/5563015941" class="btn-float whatsapp" target="_blank" title="WhatsApp">
-    <img src="images/whatsapp.png" alt="WhatsApp" />
-  </a>
-  <a href="tel:5563015941" class="btn-float call" title="Llamar">
-    <img src="images/phone.png" alt="Llamar" />
-  </a>
-  <a href="https://mail.google.com/mail/?view=cm&to=mmdymiec@outlook.es" target="_blank" class="btn-float email" title="Correo">
-    <img src="images/email.png" alt="Correo" />
-  </a>
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("nav ul li a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        const navList = document.querySelector("nav ul");
+        if (navList.classList.contains("show")) {
+          navList.classList.remove("show");
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>

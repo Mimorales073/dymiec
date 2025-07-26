@@ -1,16 +1,78 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You | DYMIEC</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thank You | DYMIEC</title>
+<link href="styles.css" rel="stylesheet"/>
+
+<style>
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: black;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      z-index: 998;
+    }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+</style>
 </head>
 <body>
-  <section style="text-align: center; padding: 100px 20px;">
-    <h1>Thank you for contacting us!</h1>
-    <p>We have received your message and will get back to you shortly.</p>
-    <a href="index-en.html">Back to Home</a>
-  </section>
+<section style="text-align: center; padding: 100px 20px;">
+<h1>Thank you for contacting us!</h1>
+<p>We have received your message and will get back to you shortly.</p>
+<a href="index-en.html">Back to Home</a>
+</section>
+
+<script>
+  function toggleMenu() {
+    const navList = document.querySelector('nav ul');
+    navList.classList.toggle('show');
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("nav ul li a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        const navList = document.querySelector("nav ul");
+        if (navList.classList.contains("show")) {
+          navList.classList.remove("show");
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>

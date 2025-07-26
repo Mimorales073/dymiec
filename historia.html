@@ -1,16 +1,59 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Historia | DYMIEC</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Historia | DYMIEC</title>
+<link href="styles.css" rel="stylesheet"/>
+
+<style>
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: black;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      z-index: 998;
+    }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+</style>
 </head>
 <body>
-  <header>
-    <img src="images/logo-dymiec.png" alt="Logo DYMIEC" style="height: 180px;" />
-    <nav>
-  <ul>
+<header>
+<img alt="Logo DYMIEC" src="images/logo-dymiec.png" style="height: 180px;"/>
+<div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div><nav>
+<ul>
 <li><a href="inicio.html">Inicio</a></li>
 <li><a href="servicios.html">Servicios</a></li>
 <li><a href="nosotros.html">Nosotros</a></li>
@@ -20,50 +63,61 @@
 <li><a href="historia.html">Historia</a></li>
 <li><a href="clientes.html">Clientes</a></li>
 <li><a href="blog.html">Blog</a></li>
-  </ul>
-
-
-    <div class="language-switcher" style="text-align:right; padding: 10px;">
-        <a href="historia.html">🇲🇽 Español</a> | <a href="historia-en.html">🇬🇧 English</a>
-    </div>
-
+</ul>
+<div class="language-switcher" style="text-align:right; padding: 10px;">
+<a href="historia.html">🇲🇽 Español</a> | <a href="historia-en.html">🇬🇧 English</a>
+</div>
 </nav>
-  </header>
+</header>
+<main>
+<section id="historia" style="padding: 40px 20px;">
+<h2>Historia</h2>
+<ul>
+<li><strong>2014</strong>   Nace la idea de consolidar una empresa dedicada a los servicios especializados y profesionales de calidad, se consolida la idea y se inician operaciones como persona física.</li>
+<li><strong>2015</strong>   Se continúan operaciones y crece la plantilla administrativa en área comercial e ingeniería, se venden los servicios a empresas conocidas a nivel internacional.</li>
+<li><strong>2017</strong>   Se crea un área dedicada al entretenimiento y espectáculos.</li>
+<li><strong>2018</strong>   Se consolidan esfuerzos para abarcar servicios a nivel nacional con grandes empresas, se agregan más servicios al catálogo que tenían.</li>
+<li><strong>2019</strong>   Se decide utilizar el nombre comercial de DYMIEC SA DE CV para fines comerciales.</li>
+<li><strong>2020</strong>   Se logran cerrar negocios con empresas reconocidas a nivel mundial y continuamos con la característica especial de la empresa, la atención al cliente y la confianza para los servicios.</li>
+<li><strong>2021</strong>   Se continúa dando servicio a clientes grandes y pequeños ya que la filosofía de la empresa es que no hay trabajo pequeño, se le da la misma importancia a cualquier trabajo.</li>
+<li><strong>2022</strong>   Se cerraron negociaciones con las empresas Pastes Kikos, Constructora FM, Chedraui, Farmacias Similares, etc., para suministros industriales y construir plantas de producción.</li>
+<li><strong>2023</strong>   En la actualidad, DYMIEC sigue en búsqueda de nuevos proyectos, servicios que ofrecer, con hambre de crecer como empresa, querer ser el principal proveedor de grandes empresas siempre pensando en la satisfacción del cliente y en su bienestar.</li>
+</ul>
+</section>
+</main>
+<footer>
+<p>© 2025 DYMIEC. Todos los derechos reservados.</p>
+</footer>
+<!-- Botón WhatsApp -->
+<a class="btn-float whatsapp" href="https://wa.me/5563015941" target="_blank" title="WhatsApp">
+<img alt="WhatsApp" src="images/whatsapp.png"/>
+</a>
+<!-- Botón llamada -->
+<a class="btn-float call" href="tel:5563015941" title="Llamar">
+<img alt="Llamar" src="images/phone.png"/>
+</a>
+<!-- Botón correo -->
+<a class="btn-float email" href="https://mail.google.com/mail/?view=cm&amp;to=mmdymiec@outlook.es" target="_blank" title="Correo">
+<img alt="Correo" src="images/email.png"/>
+</a>
 
-  <main>
-    <section id="historia" style="padding: 40px 20px;">
-      <h2>Historia</h2>
-      <ul>
-        <li><strong>2014</strong> &nbsp; Nace la idea de consolidar una empresa dedicada a los servicios especializados y profesionales de calidad, se consolida la idea y se inician operaciones como persona física.</li>
-        <li><strong>2015</strong> &nbsp; Se continúan operaciones y crece la plantilla administrativa en área comercial e ingeniería, se venden los servicios a empresas conocidas a nivel internacional.</li>
-        <li><strong>2017</strong> &nbsp; Se crea un área dedicada al entretenimiento y espectáculos.</li>
-        <li><strong>2018</strong> &nbsp; Se consolidan esfuerzos para abarcar servicios a nivel nacional con grandes empresas, se agregan más servicios al catálogo que tenían.</li>
-        <li><strong>2019</strong> &nbsp; Se decide utilizar el nombre comercial de DYMIEC SA DE CV para fines comerciales.</li>
-        <li><strong>2020</strong> &nbsp; Se logran cerrar negocios con empresas reconocidas a nivel mundial y continuamos con la característica especial de la empresa, la atención al cliente y la confianza para los servicios.</li>
-        <li><strong>2021</strong> &nbsp; Se continúa dando servicio a clientes grandes y pequeños ya que la filosofía de la empresa es que no hay trabajo pequeño, se le da la misma importancia a cualquier trabajo.</li>
-        <li><strong>2022</strong> &nbsp; Se cerraron negociaciones con las empresas Pastes Kikos, Constructora FM, Chedraui, Farmacias Similares, etc., para suministros industriales y construir plantas de producción.</li>
-        <li><strong>2023</strong> &nbsp; En la actualidad, DYMIEC sigue en búsqueda de nuevos proyectos, servicios que ofrecer, con hambre de crecer como empresa, querer ser el principal proveedor de grandes empresas siempre pensando en la satisfacción del cliente y en su bienestar.</li>
-      </ul>
-    </section>
-  </main>
+<script>
+  function toggleMenu() {
+    const navList = document.querySelector('nav ul');
+    navList.classList.toggle('show');
+  }
 
-  <footer>
-    <p>© 2025 DYMIEC. Todos los derechos reservados.</p>
-  </footer>
-
-  <!-- Botón WhatsApp -->
-  <a href="https://wa.me/5563015941" class="btn-float whatsapp" target="_blank" title="WhatsApp">
-    <img src="images/whatsapp.png" alt="WhatsApp" />
-  </a>
-
-  <!-- Botón llamada -->
-  <a href="tel:5563015941" class="btn-float call" title="Llamar">
-    <img src="images/phone.png" alt="Llamar" />
-  </a>
-
-  <!-- Botón correo -->
-  <a href="https://mail.google.com/mail/?view=cm&to=mmdymiec@outlook.es" target="_blank" class="btn-float email" title="Correo">
-    <img src="images/email.png" alt="Correo" />
-  </a>
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("nav ul li a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        const navList = document.querySelector("nav ul");
+        if (navList.classList.contains("show")) {
+          navList.classList.remove("show");
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>

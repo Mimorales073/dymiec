@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog | DYMIEC</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blog | DYMIEC</title>
+<link href="styles.css" rel="stylesheet"/>
+<style>
     body {
       display: flex;
       flex-direction: column;
@@ -17,91 +18,145 @@
       flex: 1;
     }
   </style>
+
+<style>
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: black;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      z-index: 998;
+    }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+</style>
 </head>
 <body>
-  <header>
-    <img src="images/logo-dymiec.png" alt="Logo DYMIEC" style="height: 180px;">
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="experiencia.html">Experiencia</a></li>
-        <li><a href="ubicacion.html">Ubicación</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="historia.html">Historia</a></li>
-        <li><a href="clientes.html">Clientes</a></li>
-        <li><a href="blog.html">Blog</a></li>
-      </ul>
-      <div class="language-switcher">
-        <a href="blog.html">🇲🇽 Español</a> | <a href="blog-en.html">🇬🇧 English</a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section id="blog-inicio">
-      <h2>🏗️ Bienvenido al Blog de DYMIEC: Innovación en Construcción y Espectáculos</h2>
-      <p>En <strong>DYMIEC</strong> no solo ejecutamos proyectos, también compartimos conocimiento. Este blog está diseñado para ofrecer contenido valioso enfocado en los dos sectores donde nos especializamos:</p>
-
-      <h3>🔧 Obras Civiles:</h3>
-      <ul>
-        <li>Técnicas modernas de supervisión y mantenimiento de obra.</li>
-        <li>Mejores prácticas en remodelación de espacios.</li>
-        <li>Estrategias para garantizar la seguridad y eficiencia en proyectos civiles.</li>
-      </ul>
-
-      <h3>🎭 Espectáculos:</h3>
-      <ul>
-        <li>Tendencias en iluminación profesional para espectáculos.</li>
-        <li>Realización de eventos de entretenimiento como conciertos y obras de teatro.</li>
-        <li>Suministro de todo tipo de insumos para el medio del espectáculo.</li>
-      </ul>
-    </section>
-
-    <article style="padding: 20px;">
-  <h2>5 buenas prácticas para una construcción eficiente y segura</h2>
-  <p style="margin-left: 20px;">La industria de la construcción requiere no solo precisión técnica, sino también organización y compromiso con la seguridad. Estas son algunas recomendaciones clave que aplicamos en DYMIEC:</p>
-  <ol>
-    <li>
-      <strong>Planificación detallada del proyecto:</strong>
-      <p style="margin-left: 20px;">Desde los planos hasta la logística, tener una ruta clara evita retrasos y sobrecostos innecesarios.</p>
-    </li>
-    <li>
-      <strong>Supervisión continua:</strong>
-      <p style="margin-left: 20px;">El seguimiento diario garantiza el cumplimiento de los estándares técnicos y de seguridad.</p>
-    </li>
-    <li>
-      <strong>Materiales de calidad:</strong>
-      <p style="margin-left: 20px;">Invertir en buenos materiales al inicio previene reparaciones costosas más adelante.</p>
-    </li>
-    <li>
-      <strong>Capacitación del personal:</strong>
-      <p style="margin-left: 20px;">Un equipo preparado reduce riesgos, mejora el rendimiento y entrega mejores resultados.</p>
-    </li>
-    <li>
-      <strong>Cumplimiento normativo:</strong>
-      <p style="margin-left: 20px;">Respetar las normas de construcción y seguridad vigentes es fundamental para evitar sanciones y asegurar la integridad de la obra.</p>
-    </li>
-  </ol>
-  <p style="margin-left: 20px;">En DYMIEC aplicamos estas prácticas en cada uno de nuestros proyectos, ya sean obras civiles, remodelaciones o mantenimiento de infraestructura. ¡Contáctanos si buscas eficiencia y compromiso!</p>
+<header>
+<img alt="Logo DYMIEC" src="images/logo-dymiec.png" style="height: 180px;"/>
+<div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div><nav>
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="servicios.html">Servicios</a></li>
+<li><a href="nosotros.html">Nosotros</a></li>
+<li><a href="experiencia.html">Experiencia</a></li>
+<li><a href="ubicacion.html">Ubicación</a></li>
+<li><a href="contacto.html">Contacto</a></li>
+<li><a href="historia.html">Historia</a></li>
+<li><a href="clientes.html">Clientes</a></li>
+<li><a href="blog.html">Blog</a></li>
+</ul>
+<div class="language-switcher">
+<a href="blog.html">🇲🇽 Español</a> | <a href="blog-en.html">🇬🇧 English</a>
+</div>
+</nav>
+</header>
+<main>
+<section id="blog-inicio">
+<h2>🏗️ Bienvenido al Blog de DYMIEC: Innovación en Construcción y Espectáculos</h2>
+<p>En <strong>DYMIEC</strong> no solo ejecutamos proyectos, también compartimos conocimiento. Este blog está diseñado para ofrecer contenido valioso enfocado en los dos sectores donde nos especializamos:</p>
+<h3>🔧 Obras Civiles:</h3>
+<ul>
+<li>Técnicas modernas de supervisión y mantenimiento de obra.</li>
+<li>Mejores prácticas en remodelación de espacios.</li>
+<li>Estrategias para garantizar la seguridad y eficiencia en proyectos civiles.</li>
+</ul>
+<h3>🎭 Espectáculos:</h3>
+<ul>
+<li>Tendencias en iluminación profesional para espectáculos.</li>
+<li>Realización de eventos de entretenimiento como conciertos y obras de teatro.</li>
+<li>Suministro de todo tipo de insumos para el medio del espectáculo.</li>
+</ul>
+</section>
+<article style="padding: 20px;">
+<h2>5 buenas prácticas para una construcción eficiente y segura</h2>
+<p style="margin-left: 20px;">La industria de la construcción requiere no solo precisión técnica, sino también organización y compromiso con la seguridad. Estas son algunas recomendaciones clave que aplicamos en DYMIEC:</p>
+<ol>
+<li>
+<strong>Planificación detallada del proyecto:</strong>
+<p style="margin-left: 20px;">Desde los planos hasta la logística, tener una ruta clara evita retrasos y sobrecostos innecesarios.</p>
+</li>
+<li>
+<strong>Supervisión continua:</strong>
+<p style="margin-left: 20px;">El seguimiento diario garantiza el cumplimiento de los estándares técnicos y de seguridad.</p>
+</li>
+<li>
+<strong>Materiales de calidad:</strong>
+<p style="margin-left: 20px;">Invertir en buenos materiales al inicio previene reparaciones costosas más adelante.</p>
+</li>
+<li>
+<strong>Capacitación del personal:</strong>
+<p style="margin-left: 20px;">Un equipo preparado reduce riesgos, mejora el rendimiento y entrega mejores resultados.</p>
+</li>
+<li>
+<strong>Cumplimiento normativo:</strong>
+<p style="margin-left: 20px;">Respetar las normas de construcción y seguridad vigentes es fundamental para evitar sanciones y asegurar la integridad de la obra.</p>
+</li>
+</ol>
+<p style="margin-left: 20px;">En DYMIEC aplicamos estas prácticas en cada uno de nuestros proyectos, ya sean obras civiles, remodelaciones o mantenimiento de infraestructura. ¡Contáctanos si buscas eficiencia y compromiso!</p>
 </article>
+</main>
+<footer>
+<p>© 2025 DYMIEC. Todos los derechos reservados.</p>
+</footer>
+<!-- Botones flotantes -->
+<a class="btn-float whatsapp" href="https://wa.me/5563015941" target="_blank" title="WhatsApp">
+<img alt="WhatsApp" src="images/whatsapp.png">
+</img></a>
+<a class="btn-float call" href="tel:5563015941" title="Llamar">
+<img alt="Llamar" src="images/phone.png"/>
+</a>
+<a class="btn-float email" href="https://mail.google.com/mail/?view=cm&amp;to=mmdymiec@outlook.es" target="_blank" title="Correo">
+<img alt="Correo" src="images/email.png"/>
+</a>
 
-  </main>
+<script>
+  function toggleMenu() {
+    const navList = document.querySelector('nav ul');
+    navList.classList.toggle('show');
+  }
 
-  <footer>
-    <p>© 2025 DYMIEC. Todos los derechos reservados.</p>
-  </footer>
-
-  <!-- Botones flotantes -->
-  <a href="https://wa.me/5563015941" class="btn-float whatsapp" target="_blank" title="WhatsApp">
-    <img src="images/whatsapp.png" alt="WhatsApp" />
-  </a>
-  <a href="tel:5563015941" class="btn-float call" title="Llamar">
-    <img src="images/phone.png" alt="Llamar" />
-  </a>
-  <a href="https://mail.google.com/mail/?view=cm&to=mmdymiec@outlook.es" class="btn-float email" target="_blank" title="Correo">
-    <img src="images/email.png" alt="Correo" />
-  </a>
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("nav ul li a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        const navList = document.querySelector("nav ul");
+        if (navList.classList.contains("show")) {
+          navList.classList.remove("show");
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>

@@ -1,18 +1,61 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact us for maintenance and construction in Mexico City.">
-  <title>Contact | DYMIEC</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Contact us for maintenance and construction in Mexico City." name="description"/>
+<title>Contact | DYMIEC</title>
+<link href="styles.css" rel="stylesheet"/>
+<script async="" defer="" src="https://www.google.com/recaptcha/api.js"></script>
+
+<style>
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: black;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      z-index: 998;
+    }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+</style>
 </head>
 <body>
-  <header>
-    <img src="images/logo-dymiec.png" alt="DYMIEC Logo" style="height: 180px;">
-    <nav>
-      <ul>
+<header>
+<img alt="DYMIEC Logo" src="images/logo-dymiec.png" style="height: 180px;"/>
+<div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div><nav>
+<ul>
 <li><a href="index-en.html">Home</a></li>
 <li><a href="servicios-en.html">Services</a></li>
 <li><a href="nosotros-en.html">About Us</a></li>
@@ -22,56 +65,47 @@
 <li><a href="historia-en.html">History</a></li>
 <li><a href="clientes-en.html">Clients</a></li>
 <li><a href="blog-en.html">Blog</a></li>
-      </ul>
-      <div class="language-switcher" style="text-align:right; padding: 10px;">
-        <a href="contacto.html">🇲🇽 Español</a> | <a href="contacto-en.html">🇬🇧 English</a>
-      </div>
-    </nav>
-  </header>
-
-  <section id="contacto">
-    <h2>Contact</h2>
-    <p>You can reach us through the following channels:</p>
-    <p><strong>Project Director:</strong> Miguel Angel Mendoza Morales.</p>
-    <p><strong>Phone:</strong> 5563015941</p>
-    <p><strong>Email:</strong> mmdymiec@outlook.es</p>
-    <p><a href="https://wa.me/5563015941" target="_blank">📱 Message us on WhatsApp</a></p>
-    <p><a href="https://www.facebook.com/p/Dymiec-SA-de-CV-100063548168538/" target="_blank">📘 Follow us on Facebook (over 1,400 followers)</a></p>
-
-    <h3>Send us a message</h3>
+</ul>
+<div class="language-switcher" style="text-align:right; padding: 10px;">
+<a href="contacto.html">🇲🇽 Español</a> | <a href="contacto-en.html">🇬🇧 English</a>
+</div>
+</nav>
+</header>
+<section id="contacto">
+<h2>Contact</h2>
+<p>You can reach us through the following channels:</p>
+<p><strong>Project Director:</strong> Miguel Angel Mendoza Morales.</p>
+<p><strong>Phone:</strong> 5563015941</p>
+<p><strong>Email:</strong> mmdymiec@outlook.es</p>
+<p><a href="https://wa.me/5563015941" target="_blank">📱 Message us on WhatsApp</a></p>
+<p><a href="https://www.facebook.com/p/Dymiec-SA-de-CV-100063548168538/" target="_blank">📘 Follow us on Facebook (over 1,400 followers)</a></p>
+<h3>Send us a message</h3>
 <form action="https://formsubmit.co/mmdymiec@outlook.es" method="POST">
-  <input type="text" name="nombre" placeholder="Your name" required><br><br>
-  <input type="email" name="correo" placeholder="Your email" required><br><br>
-  <textarea name="mensaje" placeholder="Your message" rows="5" required></textarea><br><br>
-
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://dymiec.com.mx/thanks-en.html">
-  <input type="hidden" name="_autoresponse" value="Thank you for contacting DYMIEC. We have received your message and will get back to you shortly.">
-
-  <div class="g-recaptcha" data-sitekey="6Ldrto0rAAAAAILMJXeEiqu_dVB4lIfDdOl2UWpC"></div>
-  <br>
-  <button type="submit">Send</button>
+<input name="nombre" placeholder="Your name" required="" type="text"/><br/><br/>
+<input name="correo" placeholder="Your email" required="" type="email"/><br/><br/>
+<textarea name="mensaje" placeholder="Your message" required="" rows="5"></textarea><br/><br/>
+<input name="_captcha" type="hidden" value="false"/>
+<input name="_next" type="hidden" value="https://dymiec.com.mx/thanks-en.html"/>
+<input name="_autoresponse" type="hidden" value="Thank you for contacting DYMIEC. We have received your message and will get back to you shortly."/>
+<div class="g-recaptcha" data-sitekey="6Ldrto0rAAAAAILMJXeEiqu_dVB4lIfDdOl2UWpC"></div>
+<br/>
+<button type="submit">Send</button>
 </form>
-  </section>
-
-  <footer>
-    <p>© 2025 DYMIEC. All rights reserved.</p>
-  </footer>
-
-  <!-- Floating Buttons -->
-  <a href="https://wa.me/5563015941" class="btn-float whatsapp" target="_blank" title="WhatsApp">
-    <img src="images/whatsapp.png" alt="WhatsApp">
-  </a>
-
-  <a href="tel:5563015941" class="btn-float call" title="Call">
-    <img src="images/phone.png" alt="Call">
-  </a>
-
-  <a href="https://mail.google.com/mail/?view=cm&to=mmdymiec@outlook.es" target="_blank" class="btn-float email" title="Email">
-    <img src="images/email.png" alt="Email">
-  </a>
-
-  <script>
+</section>
+<footer>
+<p>© 2025 DYMIEC. All rights reserved.</p>
+</footer>
+<!-- Floating Buttons -->
+<a class="btn-float whatsapp" href="https://wa.me/5563015941" target="_blank" title="WhatsApp">
+<img alt="WhatsApp" src="images/whatsapp.png"/>
+</a>
+<a class="btn-float call" href="tel:5563015941" title="Call">
+<img alt="Call" src="images/phone.png"/>
+</a>
+<a class="btn-float email" href="https://mail.google.com/mail/?view=cm&amp;to=mmdymiec@outlook.es" target="_blank" title="Email">
+<img alt="Email" src="images/email.png"/>
+</a>
+<script>
     document.querySelector("form").addEventListener("submit", function(e) {
       const response = grecaptcha.getResponse();
       if (response.length === 0) {
@@ -80,5 +114,24 @@
       }
     });
   </script>
+
+<script>
+  function toggleMenu() {
+    const navList = document.querySelector('nav ul');
+    navList.classList.toggle('show');
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("nav ul li a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        const navList = document.querySelector("nav ul");
+        if (navList.classList.contains("show")) {
+          navList.classList.remove("show");
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>

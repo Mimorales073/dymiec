@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Experiencia | DYMIEC</title>
-  <link rel="stylesheet" href="styles.css" />
-      <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Experiencia | DYMIEC</title>
+<link href="styles.css" rel="stylesheet"/>
+<style>
       .experiencia-item {
         display: grid;
         grid-template-columns: 130px 1fr;
@@ -15,12 +16,54 @@
         margin: 0;
       }
     </style>
+
+<style>
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: black;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      z-index: 998;
+    }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+</style>
 </head>
 <body>
-  <header>
-    <img src="images/logo-dymiec.png" alt="Logo DYMIEC" style="height: 180px;">
-    <nav>
-  <ul>
+<header>
+<img alt="Logo DYMIEC" src="images/logo-dymiec.png" style="height: 180px;"/>
+<div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div><nav>
+<ul>
 <li><a href="inicio.html">Inicio</a></li>
 <li><a href="servicios.html">Servicios</a></li>
 <li><a href="nosotros.html">Nosotros</a></li>
@@ -30,249 +73,238 @@
 <li><a href="historia.html">Historia</a></li>
 <li><a href="clientes.html">Clientes</a></li>
 <li><a href="blog.html">Blog</a></li>
-  </ul>
-
-
-    <div class="language-switcher" style="text-align:right; padding: 10px;">
-        <a href="experiencia.html">🇲🇽 Español</a> | <a href="experiencia-en.html">🇬🇧 English</a>
-    </div>
-
+</ul>
+<div class="language-switcher" style="text-align:right; padding: 10px;">
+<a href="experiencia.html">🇲🇽 Español</a> | <a href="experiencia-en.html">🇬🇧 English</a>
+</div>
 </nav>
-  </header>
-
-  <section id="experiencia" style="text-align: left; margin-left: 0; padding-left: 20px;">
-    <h2 style="text-align: left;">Experiencia laboral</h2>
-
-    <div class="experiencia-item">
-      <p><strong>OBRA:</strong></p>
-      <p>Estudio de Grabación.</p>
-      <p><strong>UBICACIÓN:</strong></p>
-      <p>Cto. Interior Mtro. José Vasconcelos 184, Colonia Condesa, CDMX.</p>
-      <p><strong>ALCANCE:</strong></p>
-      <p>Remodelación de un estudio de grabación de SAE Institute.</p>
-    </div>
-    <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Mantenimiento a Subestaciones eléctricas en Chedraui.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>República Mexicana.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Mantenimiento preventivo y correctivo a subestaciones eléctricas.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Escuela.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>Av. Cuauhtémoc 1461, Sta Cruz Atoyac, CDMX.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Remodelación de un gimnasio a escuela 3 niveles de SAE Institute.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Laboratorios.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>Pte 116 689, Industrial Vallejo, CDMX.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Remodelación de laboratorios de bebidas y alimentos de grupo PEPSICO Tech Center.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Pavimentación.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>Pte 116 689, Industrial Vallejo, CDMX.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Pavimentación de estacionamientos de grupo PEPSICO Tech Center.</p>
-  </div>
-
+</header>
+<section id="experiencia" style="text-align: left; margin-left: 0; padding-left: 20px;">
+<h2 style="text-align: left;">Experiencia laboral</h2>
 <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Remodeledación General.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>Pte 116 689, Industrial Vallejo, CDMX.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Remodelación de baños, salas de juntas y oficinas de grupo PEPSICO y CIES.</p>
-  </div>
+<p><strong>OBRA:</strong></p>
+<p>Estudio de Grabación.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Cto. Interior Mtro. José Vasconcelos 184, Colonia Condesa, CDMX.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Remodelación de un estudio de grabación de SAE Institute.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Mantenimiento a Subestaciones eléctricas en Chedraui.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>República Mexicana.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Mantenimiento preventivo y correctivo a subestaciones eléctricas.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Escuela.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Av. Cuauhtémoc 1461, Sta Cruz Atoyac, CDMX.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Remodelación de un gimnasio a escuela 3 niveles de SAE Institute.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Laboratorios.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Pte 116 689, Industrial Vallejo, CDMX.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Remodelación de laboratorios de bebidas y alimentos de grupo PEPSICO Tech Center.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Pavimentación.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Pte 116 689, Industrial Vallejo, CDMX.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Pavimentación de estacionamientos de grupo PEPSICO Tech Center.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Remodeledación General.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Pte 116 689, Industrial Vallejo, CDMX.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Remodelación de baños, salas de juntas y oficinas de grupo PEPSICO y CIES.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Casa Habitación.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Puebla de Zaragoza.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Proyecto Ejecutivo y Arquitectónico de Casa Habitación.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Oficinas.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>2da Cerrada de Jalisco 6, Reforma Política, Iztapalapa, CDMX.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Remodelación de oficinas generales DYMIEC.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Mantenimiento.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Av. Paseo de la Reforma 510, Juárez, CDMX.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Mantenimiento general en instalaciones de Torre Ejecutiva BBVA Bancomer.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Oficinas.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Cda. Palomas 22, Reforma Soc, CDMX.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Instalaciones hidráulicas, sanitarias y de aire acondicionado para Grupo Modelo.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Refinería.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Carretera Jorobas Tula km 26.5, Atitalaquia, Hgo.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Dibujos AS-BUILT para proyecto Refinería PEMEX en Tula Hgo.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Hangar Presidencial.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Aeropuerto Int. CDMX.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Dibujos AS-BUILT para proyecto Hangar Presidencial, de AICM.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>The Summit Santa Fe.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Av. Prolongación Paseo de la Reforma 1196, CDMX.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Suministro y colocación de malla ciclónica y concertina.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Auditorio Nacional.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Av. Paseo de la Reforma 50, Polanco V Secc, Miguel Hidalgo, CDMX.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Suministro y aplicación de pintura de esmalte en portones, barandales y balizamiento.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Pisos de madera.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Amsterdam 108, Hipódromo Condesa, CDMX.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Aplicación de barniz en oficinas del estado de Durango.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Remodelación general del Auditorio nacional.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Av. Paseo de la Reforma 50, Polanco V Secc, Miguel Hidalgo, 11560 Ciudad de México, CDMX.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Suministro y aplicación de pintura de esmalte en portones, barandales y balizamiento en estacionamientos generales, pasos peatonales, etc.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Pisos de madera.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Amsterdam 108, Hipódromo Condesa, Ciudad de México, CDMX.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Suministro y aplicación de barniz en pisos de madera, en oficinas del estado de Durango en la CDMX.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Carpintería pisos presidenciales.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Av. Paseo de la Reforma 510, Juárez, 06600 Ciudad de México, CDMX.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Rebarnizado de puertas en pisos presidenciales Torre Ejecutiva BBVA.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Obra civil en oficinas de Durango.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Amsterdam 108, Hipódromo Condesa, Ciudad de México, CDMX.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Cimentación de muros, tabique ligero y losas de concreto en remodelación de oficinas del estado de Durango.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Obra sanitaria ADUANA AEROPUERTO CDMX.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>—</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Cambio de instalación sanitaria, rompiendo losa de cimentación de 80 cms de concreto.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Casa habitación.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Querétaro.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Proyecto ejecutivo y construcción del mismo.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Mantenimiento general.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Varios a nivel República Mexicana.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Chedraui a nivel nacional, mantenimiento a subestaciones, transformadores, banco de capacitores.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Mantenimiento general.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Varios.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Mantenimiento a CMR (Cadena Mexicana de Restaurantes)</p>
+</div>
+<div class="experiencia-item">
+<p><strong>OBRA:</strong></p>
+<p>Remodelación corporativo Pastes Kikos.</p>
+<p><strong>UBICACIÓN:</strong></p>
+<p>Pachuca de Soto, Hidalgo.</p>
+<p><strong>ALCANCE:</strong></p>
+<p>Remodelación de oficinas, planta de producción, embarque y desembarque de productos.</p>
+</div>
+</section>
+<footer>
+<p>© 2025 DYMIEC. Todos los derechos reservados.</p>
+</footer>
+<!-- Botones flotantes -->
+<a class="btn-float whatsapp" href="https://wa.me/5563015941" target="_blank" title="WhatsApp">
+<img alt="WhatsApp" src="images/whatsapp.png">
+</img></a>
+<a class="btn-float call" href="tel:5563015941" title="Llamar">
+<img alt="Llamar" src="images/phone.png"/>
+</a>
+<a class="btn-float email" href="https://mail.google.com/mail/?view=cm&amp;to=mmdymiec@outlook.es" target="_blank" title="Correo">
+<img alt="Correo" src="images/email.png"/>
+</a>
 
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Casa Habitación.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>Puebla de Zaragoza.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Proyecto Ejecutivo y Arquitectónico de Casa Habitación.</p>
-  </div>
+<script>
+  function toggleMenu() {
+    const navList = document.querySelector('nav ul');
+    navList.classList.toggle('show');
+  }
 
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Oficinas.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>2da Cerrada de Jalisco 6, Reforma Política, Iztapalapa, CDMX.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Remodelación de oficinas generales DYMIEC.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Mantenimiento.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>Av. Paseo de la Reforma 510, Juárez, CDMX.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Mantenimiento general en instalaciones de Torre Ejecutiva BBVA Bancomer.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Oficinas.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>Cda. Palomas 22, Reforma Soc, CDMX.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Instalaciones hidráulicas, sanitarias y de aire acondicionado para Grupo Modelo.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Refinería.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>Carretera Jorobas Tula km 26.5, Atitalaquia, Hgo.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Dibujos AS-BUILT para proyecto Refinería PEMEX en Tula Hgo.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Hangar Presidencial.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>Aeropuerto Int. CDMX.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Dibujos AS-BUILT para proyecto Hangar Presidencial, de AICM.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>The Summit Santa Fe.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>Av. Prolongación Paseo de la Reforma 1196, CDMX.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Suministro y colocación de malla ciclónica y concertina.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Auditorio Nacional.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>Av. Paseo de la Reforma 50, Polanco V Secc, Miguel Hidalgo, CDMX.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Suministro y aplicación de pintura de esmalte en portones, barandales y balizamiento.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Pisos de madera.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>Amsterdam 108, Hipódromo Condesa, CDMX.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Aplicación de barniz en oficinas del estado de Durango.</p>
-  </div>
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Remodelación general del Auditorio nacional.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>Av. Paseo de la Reforma 50, Polanco V Secc, Miguel Hidalgo, 11560 Ciudad de México, CDMX.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Suministro y aplicación de pintura de esmalte en portones, barandales y balizamiento en estacionamientos generales, pasos peatonales, etc.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Pisos de madera.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>Amsterdam 108, Hipódromo Condesa, Ciudad de México, CDMX.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Suministro y aplicación de barniz en pisos de madera, en oficinas del estado de Durango en la CDMX.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Carpintería pisos presidenciales.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>Av. Paseo de la Reforma 510, Juárez, 06600 Ciudad de México, CDMX.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Rebarnizado de puertas en pisos presidenciales Torre Ejecutiva BBVA.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Obra civil en oficinas de Durango.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>Amsterdam 108, Hipódromo Condesa, Ciudad de México, CDMX.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Cimentación de muros, tabique ligero y losas de concreto en remodelación de oficinas del estado de Durango.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Obra sanitaria ADUANA AEROPUERTO CDMX.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>—</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Cambio de instalación sanitaria, rompiendo losa de cimentación de 80 cms de concreto.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Casa habitación.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>Querétaro.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Proyecto ejecutivo y construcción del mismo.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Mantenimiento general.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>Varios a nivel República Mexicana.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Chedraui a nivel nacional, mantenimiento a subestaciones, transformadores, banco de capacitores.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Mantenimiento general.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>Varios.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Mantenimiento a CMR (Cadena Mexicana de Restaurantes)</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>OBRA:</strong></p>
-    <p>Remodelación corporativo Pastes Kikos.</p>
-    <p><strong>UBICACIÓN:</strong></p>
-    <p>Pachuca de Soto, Hidalgo.</p>
-    <p><strong>ALCANCE:</strong></p>
-    <p>Remodelación de oficinas, planta de producción, embarque y desembarque de productos.</p>
-  </div>
-  </section>
-
-  <footer>
-    <p>© 2025 DYMIEC. Todos los derechos reservados.</p>
-  </footer>
-
-  <!-- Botones flotantes -->
-  <a href="https://wa.me/5563015941" class="btn-float whatsapp" target="_blank" title="WhatsApp">
-    <img src="images/whatsapp.png" alt="WhatsApp" />
-  </a>
-
-  <a href="tel:5563015941" class="btn-float call" title="Llamar">
-    <img src="images/phone.png" alt="Llamar" />
-  </a>
-
-  <a href="https://mail.google.com/mail/?view=cm&to=mmdymiec@outlook.es" target="_blank" class="btn-float email" title="Correo">
-    <img src="images/email.png" alt="Correo" />
-  </a>
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("nav ul li a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        const navList = document.querySelector("nav ul");
+        if (navList.classList.contains("show")) {
+          navList.classList.remove("show");
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>

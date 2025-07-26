@@ -1,17 +1,60 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="DYMIEC's experience in the entertainment and construction industry.">
-  <title>Experience | DYMIEC</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="DYMIEC's experience in the entertainment and construction industry." name="description"/>
+<title>Experience | DYMIEC</title>
+<link href="styles.css" rel="stylesheet"/>
+
+<style>
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: black;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      z-index: 998;
+    }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+</style>
 </head>
 <body>
-  <header>
-    <img src="images/logo-dymiec.png" alt="DYMIEC Logo" style="height: 180px;">
-<nav>
-      <ul>
+<header>
+<img alt="DYMIEC Logo" src="images/logo-dymiec.png" style="height: 180px;"/>
+<div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div><nav>
+<ul>
 <li><a href="index-en.html">Home</a></li>
 <li><a href="servicios-en.html">Services</a></li>
 <li><a href="nosotros-en.html">About Us</a></li>
@@ -21,248 +64,239 @@
 <li><a href="historia-en.html">History</a></li>
 <li><a href="clientes-en.html">Clients</a></li>
 <li><a href="blog-en.html">Blog</a></li>
-      </ul>
-  <div class="language-switcher">
-    <a href="experiencia.html">🇲🇽 Español</a> |
+</ul>
+<div class="language-switcher">
+<a href="experiencia.html">🇲🇽 Español</a> |
     <a href="experiencia-en.html">🇬🇧 English</a>
-  </div>
+</div>
 </nav>
-  </header>
-
-  <section id="experience" style="text-align: left; margin-left: 0; padding-left: 20px;">
-  <h2 style="text-align: left;">Work Experience</h2>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>Recording Studio.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Cto. Interior Mtro. José Vasconcelos 184, Colonia Condesa, CDMX.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>Remodeling of a recording studio at SAE Institute.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>Maintenance of Electrical Substations at Chedraui.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Throughout Mexico.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>Preventive and corrective maintenance of electrical substations.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>School.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Av. Cuauhtémoc 1461, Sta Cruz Atoyac, CDMX.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>Gym remodel converted into a 3-level school for SAE Institute.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>Laboratories.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Pte 116 689, Industrial Vallejo, CDMX.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>Remodeling of beverage and food laboratories for PEPSICO Tech Center.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>Paving.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Pte 116 689, Industrial Vallejo, CDMX.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>Paving of parking lots for PEPSICO Tech Center.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>General Remodeling.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Pte 116 689, Industrial Vallejo, CDMX.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>Remodeling of restrooms, meeting rooms, and offices for PEPSICO and CIES.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>Residential House.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Puebla de Zaragoza.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>Executive and architectural project for a residential house.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>Offices.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>2da Cerrada de Jalisco 6, Reforma Política, Iztapalapa, CDMX.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>Remodeling of DYMIEC's main offices.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>General Maintenance.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Av. Paseo de la Reforma 510, Juárez, CDMX.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>General maintenance at Torre Ejecutiva BBVA Bancomer facilities.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>Offices.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Cda. Palomas 22, Reforma Soc, CDMX.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>Plumbing, sanitation, and air conditioning installations for Grupo Modelo.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>Refinery.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Carretera Jorobas Tula km 26.5, Atitalaquia, Hgo.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>AS-BUILT drawings for PEMEX Refinery project in Tula, Hgo.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>Presidential Hangar.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>CDMX International Airport.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>AS-BUILT drawings for the Presidential Hangar project at AICM.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>The Summit Santa Fe.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Av. Prolongación Paseo de la Reforma 1196, CDMX.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>Supply and installation of cyclone mesh and concertina wire.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>National Auditorium.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Av. Paseo de la Reforma 50, Polanco V Secc, Miguel Hidalgo, CDMX.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>Supply and application of enamel paint on gates, railings, and markings.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>Wood Floors.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Amsterdam 108, Hipódromo Condesa, CDMX.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>Varnish application in Durango state offices.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>General Remodeling of the National Auditorium.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Av. Paseo de la Reforma 50, Polanco V Secc, Miguel Hidalgo, 11560 Mexico City, CDMX.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>Enamel paint application on gates, railings, and general parking lot markings.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>Wood Floors.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Amsterdam 108, Hipódromo Condesa, Mexico City, CDMX.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>Varnish application on wood floors in Durango state offices in CDMX.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>Presidential Floor Carpentry.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Av. Paseo de la Reforma 510, Juárez, 06600 Mexico City, CDMX.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>Re-varnishing of doors on BBVA Presidential Floors.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>Civil Work in Durango Offices.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Amsterdam 108, Hipódromo Condesa, Mexico City, CDMX.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>Wall foundations, lightweight partitions, and concrete slabs for Durango office remodeling.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>Sanitary Work at CDMX AIRPORT CUSTOMS.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>—</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>Replacement of sanitary installation, breaking an 80 cm thick concrete slab.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>Residential House.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Querétaro.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>Executive project and construction of the same.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>General Maintenance.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Various locations across Mexico.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>National maintenance for Chedraui: substations, transformers, capacitor banks.</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>General Maintenance.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Various.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>Maintenance for CMR (Mexican Restaurant Chain).</p>
-  </div>
-
-  <div class="experiencia-item">
-    <p><strong>PROJECT:</strong></p>
-    <p>Remodeling of Pastes Kikos corporate office.</p>
-    <p><strong>LOCATION:</strong></p>
-    <p>Pachuca de Soto, Hidalgo.</p>
-    <p><strong>SCOPE:</strong></p>
-    <p>Office remodeling, production plant, loading/unloading areas.</p>
-  </div>
+</header>
+<section id="experience" style="text-align: left; margin-left: 0; padding-left: 20px;">
+<h2 style="text-align: left;">Work Experience</h2>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>Recording Studio.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Cto. Interior Mtro. José Vasconcelos 184, Colonia Condesa, CDMX.</p>
+<p><strong>SCOPE:</strong></p>
+<p>Remodeling of a recording studio at SAE Institute.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>Maintenance of Electrical Substations at Chedraui.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Throughout Mexico.</p>
+<p><strong>SCOPE:</strong></p>
+<p>Preventive and corrective maintenance of electrical substations.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>School.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Av. Cuauhtémoc 1461, Sta Cruz Atoyac, CDMX.</p>
+<p><strong>SCOPE:</strong></p>
+<p>Gym remodel converted into a 3-level school for SAE Institute.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>Laboratories.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Pte 116 689, Industrial Vallejo, CDMX.</p>
+<p><strong>SCOPE:</strong></p>
+<p>Remodeling of beverage and food laboratories for PEPSICO Tech Center.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>Paving.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Pte 116 689, Industrial Vallejo, CDMX.</p>
+<p><strong>SCOPE:</strong></p>
+<p>Paving of parking lots for PEPSICO Tech Center.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>General Remodeling.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Pte 116 689, Industrial Vallejo, CDMX.</p>
+<p><strong>SCOPE:</strong></p>
+<p>Remodeling of restrooms, meeting rooms, and offices for PEPSICO and CIES.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>Residential House.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Puebla de Zaragoza.</p>
+<p><strong>SCOPE:</strong></p>
+<p>Executive and architectural project for a residential house.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>Offices.</p>
+<p><strong>LOCATION:</strong></p>
+<p>2da Cerrada de Jalisco 6, Reforma Política, Iztapalapa, CDMX.</p>
+<p><strong>SCOPE:</strong></p>
+<p>Remodeling of DYMIEC's main offices.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>General Maintenance.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Av. Paseo de la Reforma 510, Juárez, CDMX.</p>
+<p><strong>SCOPE:</strong></p>
+<p>General maintenance at Torre Ejecutiva BBVA Bancomer facilities.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>Offices.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Cda. Palomas 22, Reforma Soc, CDMX.</p>
+<p><strong>SCOPE:</strong></p>
+<p>Plumbing, sanitation, and air conditioning installations for Grupo Modelo.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>Refinery.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Carretera Jorobas Tula km 26.5, Atitalaquia, Hgo.</p>
+<p><strong>SCOPE:</strong></p>
+<p>AS-BUILT drawings for PEMEX Refinery project in Tula, Hgo.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>Presidential Hangar.</p>
+<p><strong>LOCATION:</strong></p>
+<p>CDMX International Airport.</p>
+<p><strong>SCOPE:</strong></p>
+<p>AS-BUILT drawings for the Presidential Hangar project at AICM.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>The Summit Santa Fe.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Av. Prolongación Paseo de la Reforma 1196, CDMX.</p>
+<p><strong>SCOPE:</strong></p>
+<p>Supply and installation of cyclone mesh and concertina wire.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>National Auditorium.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Av. Paseo de la Reforma 50, Polanco V Secc, Miguel Hidalgo, CDMX.</p>
+<p><strong>SCOPE:</strong></p>
+<p>Supply and application of enamel paint on gates, railings, and markings.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>Wood Floors.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Amsterdam 108, Hipódromo Condesa, CDMX.</p>
+<p><strong>SCOPE:</strong></p>
+<p>Varnish application in Durango state offices.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>General Remodeling of the National Auditorium.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Av. Paseo de la Reforma 50, Polanco V Secc, Miguel Hidalgo, 11560 Mexico City, CDMX.</p>
+<p><strong>SCOPE:</strong></p>
+<p>Enamel paint application on gates, railings, and general parking lot markings.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>Wood Floors.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Amsterdam 108, Hipódromo Condesa, Mexico City, CDMX.</p>
+<p><strong>SCOPE:</strong></p>
+<p>Varnish application on wood floors in Durango state offices in CDMX.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>Presidential Floor Carpentry.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Av. Paseo de la Reforma 510, Juárez, 06600 Mexico City, CDMX.</p>
+<p><strong>SCOPE:</strong></p>
+<p>Re-varnishing of doors on BBVA Presidential Floors.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>Civil Work in Durango Offices.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Amsterdam 108, Hipódromo Condesa, Mexico City, CDMX.</p>
+<p><strong>SCOPE:</strong></p>
+<p>Wall foundations, lightweight partitions, and concrete slabs for Durango office remodeling.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>Sanitary Work at CDMX AIRPORT CUSTOMS.</p>
+<p><strong>LOCATION:</strong></p>
+<p>—</p>
+<p><strong>SCOPE:</strong></p>
+<p>Replacement of sanitary installation, breaking an 80 cm thick concrete slab.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>Residential House.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Querétaro.</p>
+<p><strong>SCOPE:</strong></p>
+<p>Executive project and construction of the same.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>General Maintenance.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Various locations across Mexico.</p>
+<p><strong>SCOPE:</strong></p>
+<p>National maintenance for Chedraui: substations, transformers, capacitor banks.</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>General Maintenance.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Various.</p>
+<p><strong>SCOPE:</strong></p>
+<p>Maintenance for CMR (Mexican Restaurant Chain).</p>
+</div>
+<div class="experiencia-item">
+<p><strong>PROJECT:</strong></p>
+<p>Remodeling of Pastes Kikos corporate office.</p>
+<p><strong>LOCATION:</strong></p>
+<p>Pachuca de Soto, Hidalgo.</p>
+<p><strong>SCOPE:</strong></p>
+<p>Office remodeling, production plant, loading/unloading areas.</p>
+</div>
 </section>
-  <footer>
-    <p>© 2025 DYMIEC. All rights reserved.</p>
-  </footer>
+<footer>
+<p>© 2025 DYMIEC. All rights reserved.</p>
+</footer>
+<!-- Floating Buttons -->
+<a class="btn-float whatsapp" href="https://wa.me/5563015941" target="_blank" title="WhatsApp">
+<img alt="WhatsApp" src="images/whatsapp.png"/>
+</a>
+<a class="btn-float call" href="tel:5563015941" title="Call">
+<img alt="Call" src="images/phone.png"/>
+</a>
+<a class="btn-float email" href="https://mail.google.com/mail/?view=cm&amp;to=mmdymiec@outlook.es" target="_blank" title="Email">
+<img alt="Email" src="images/email.png"/>
+</a>
 
-  <!-- Floating Buttons -->
-  <a href="https://wa.me/5563015941" class="btn-float whatsapp" target="_blank" title="WhatsApp">
-    <img src="images/whatsapp.png" alt="WhatsApp">
-  </a>
+<script>
+  function toggleMenu() {
+    const navList = document.querySelector('nav ul');
+    navList.classList.toggle('show');
+  }
 
-  <a href="tel:5563015941" class="btn-float call" title="Call">
-    <img src="images/phone.png" alt="Call">
-  </a>
-
-  <a href="https://mail.google.com/mail/?view=cm&to=mmdymiec@outlook.es" target="_blank" class="btn-float email" title="Email">
-    <img src="images/email.png" alt="Email">
-  </a>
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("nav ul li a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        const navList = document.querySelector("nav ul");
+        if (navList.classList.contains("show")) {
+          navList.classList.remove("show");
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>

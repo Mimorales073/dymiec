@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clientes | DYMIEC</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clientes | DYMIEC</title>
+<link href="styles.css" rel="stylesheet"/>
+<style>
     .clientes-galeria {
       display: flex;
       flex-wrap: wrap;
@@ -24,12 +25,54 @@
       filter: grayscale(0%);
     }
   </style>
+
+<style>
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: black;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      z-index: 998;
+    }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+</style>
 </head>
 <body>
-  <header>
-    <img src="images/logo-dymiec.png" alt="Logo DYMIEC" style="height: 180px;">
-    <nav>
-  <ul>
+<header>
+<img alt="Logo DYMIEC" src="images/logo-dymiec.png" style="height: 180px;"/>
+<div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div><nav>
+<ul>
 <li><a href="inicio.html">Inicio</a></li>
 <li><a href="servicios.html">Servicios</a></li>
 <li><a href="nosotros.html">Nosotros</a></li>
@@ -39,55 +82,69 @@
 <li><a href="historia.html">Historia</a></li>
 <li><a href="clientes.html">Clientes</a></li>
 <li><a href="blog.html">Blog</a></li>
-  </ul>
-
-    <div class="language-switcher" style="text-align:right; padding: 10px;">
-        <a href="clientes.html">🇲🇽 Español</a> | <a href="clientes-en.html">🇬🇧 English</a>
-    </div>
-
+</ul>
+<div class="language-switcher" style="text-align:right; padding: 10px;">
+<a href="clientes.html">🇲🇽 Español</a> | <a href="clientes-en.html">🇬🇧 English</a>
+</div>
 </nav>
-  </header>
-
+</header>
 <section id="clientes">
-        <h2>Algunos de Nuestros Clientes.</h2>
-        <p>Hemos tenido la fortuna de trabajar para algunas empresas reconocidas nacional e internacionalmente como:</p>
-        <div class="galeria">
-            <div class="item"><img src="images/clientes/panasonic.png" alt="Panasonic"></div>
-            <div class="item"><img src="images/clientes/iusa.png" alt="USA"></div>
-            <div class="item"><img src="images/clientes/fm.png" alt="FM"></div>
-            <div class="item"><img src="images/clientes/dyppisa.png" alt="Dyppisa"></div>
-            <div class="item"><img src="images/clientes/iusasol.png" alt="IUSASOL"></div>
-            <div class="item"><img src="images/clientes/medicasur.png" alt="Médica Sur"></div>
-            <div class="item"><img src="images/clientes/jumex.png" alt="Jumex"></div>
-            <div class="item"><img src="images/clientes/auditorio-nacional.png" alt="Auditorio Nacional"></div>
-            <div class="item"><img src="images/clientes/sony.png" alt="Sony"></div>
-            <div class="item"><img src="images/clientes/mitsubishi.png" alt="Mitsubishi"></div>
-            <div class="item"><img src="images/clientes/purina.png" alt="Purina"></div>
-            <div class="item"><img src="images/clientes/walmart.png" alt="Walmart"></div>
-            <div class="item"><img src="images/clientes/plaza-satelite.png" alt="Plaza Satélite"></div>
-            <div class="item"><img src="images/clientes/kikos.png" alt="Kikos"></div>
-            <div class="item"><img src="images/clientes/chedraui.png" alt="Chedraui"></div>
-            <div class="item"><img src="images/clientes/petco.png" alt="Petco"></div>
-            <div class="item"><img src="images/clientes/gobierno.png" alt="Gobierno de México"></div>
-            <div class="item"><img src="images/clientes/unam.png" alt="UNAM"></div>
-            <div class="item"><img src="images/clientes/similares.png" alt="Farmacias Similares"></div>
-            <div class="item"><img src="images/clientes/waldos.png" alt="Waldo's"></div>
-        </div>
-    </section>
+<h2>Algunos de Nuestros Clientes.</h2>
+<p>Hemos tenido la fortuna de trabajar para algunas empresas reconocidas nacional e internacionalmente como:</p>
+<div class="galeria">
+<div class="item"><img alt="Panasonic" src="images/clientes/panasonic.png"/></div>
+<div class="item"><img alt="USA" src="images/clientes/iusa.png"/></div>
+<div class="item"><img alt="FM" src="images/clientes/fm.png"/></div>
+<div class="item"><img alt="Dyppisa" src="images/clientes/dyppisa.png"/></div>
+<div class="item"><img alt="IUSASOL" src="images/clientes/iusasol.png"/></div>
+<div class="item"><img alt="Médica Sur" src="images/clientes/medicasur.png"/></div>
+<div class="item"><img alt="Jumex" src="images/clientes/jumex.png"/></div>
+<div class="item"><img alt="Auditorio Nacional" src="images/clientes/auditorio-nacional.png"/></div>
+<div class="item"><img alt="Sony" src="images/clientes/sony.png"/></div>
+<div class="item"><img alt="Mitsubishi" src="images/clientes/mitsubishi.png"/></div>
+<div class="item"><img alt="Purina" src="images/clientes/purina.png"/></div>
+<div class="item"><img alt="Walmart" src="images/clientes/walmart.png"/></div>
+<div class="item"><img alt="Plaza Satélite" src="images/clientes/plaza-satelite.png"/></div>
+<div class="item"><img alt="Kikos" src="images/clientes/kikos.png"/></div>
+<div class="item"><img alt="Chedraui" src="images/clientes/chedraui.png"/></div>
+<div class="item"><img alt="Petco" src="images/clientes/petco.png"/></div>
+<div class="item"><img alt="Gobierno de México" src="images/clientes/gobierno.png"/></div>
+<div class="item"><img alt="UNAM" src="images/clientes/unam.png"/></div>
+<div class="item"><img alt="Farmacias Similares" src="images/clientes/similares.png"/></div>
+<div class="item"><img alt="Waldo's" src="images/clientes/waldos.png"/></div>
+</div>
+</section>
+<footer>
+<p>© 2025 DYMIEC. Todos los derechos reservados.</p>
+</footer>
+<!-- Botones flotantes -->
+<a class="btn-float whatsapp" href="https://wa.me/5563015941" target="_blank" title="WhatsApp">
+<img alt="WhatsApp" src="images/whatsapp.png">
+</img></a>
+<a class="btn-float call" href="tel:5563015941" title="Llamar">
+<img alt="Llamar" src="images/phone.png">
+</img></a>
+<a class="btn-float email" href="https://mail.google.com/mail/?view=cm&amp;to=mmdymiec@outlook.es" target="_blank" title="Correo">
+<img alt="Correo" src="images/email.png">
+</img></a>
 
-  <footer>
-    <p>© 2025 DYMIEC. Todos los derechos reservados.</p>
-  </footer>
+<script>
+  function toggleMenu() {
+    const navList = document.querySelector('nav ul');
+    navList.classList.toggle('show');
+  }
 
-  <!-- Botones flotantes -->
-  <a href="https://wa.me/5563015941" class="btn-float whatsapp" target="_blank" title="WhatsApp">
-    <img src="images/whatsapp.png" alt="WhatsApp" />
-  </a>
-  <a href="tel:5563015941" class="btn-float call" title="Llamar">
-    <img src="images/phone.png" alt="Llamar" />
-  </a>
-  <a href="https://mail.google.com/mail/?view=cm&to=mmdymiec@outlook.es" target="_blank" class="btn-float email" title="Correo">
-    <img src="images/email.png" alt="Correo" />
-  </a>
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("nav ul li a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        const navList = document.querySelector("nav ul");
+        if (navList.classList.contains("show")) {
+          navList.classList.remove("show");
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>

@@ -1,17 +1,60 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="DYMIEC was founded with the vision of transforming the entertainment and construction industries through quality and innovation.">
-  <title>History | DYMIEC</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="DYMIEC was founded with the vision of transforming the entertainment and construction industries through quality and innovation." name="description"/>
+<title>History | DYMIEC</title>
+<link href="styles.css" rel="stylesheet"/>
+
+<style>
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: black;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      z-index: 998;
+    }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+</style>
 </head>
 <body>
-  <header>
-    <img src="images/logo-dymiec.png" alt="DYMIEC Logo" style="height: 180px;">
-<nav>
-      <ul>
+<header>
+<img alt="DYMIEC Logo" src="images/logo-dymiec.png" style="height: 180px;"/>
+<div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div><nav>
+<ul>
 <li><a href="index-en.html">Home</a></li>
 <li><a href="servicios-en.html">Services</a></li>
 <li><a href="nosotros-en.html">About Us</a></li>
@@ -21,40 +64,58 @@
 <li><a href="historia-en.html">History</a></li>
 <li><a href="clientes-en.html">Clients</a></li>
 <li><a href="blog-en.html">Blog</a></li>
-      </ul>
-  <div class="language-switcher">
-    <a href="historia.html">🇲🇽 Español</a> |
+</ul>
+<div class="language-switcher">
+<a href="historia.html">🇲🇽 Español</a> |
     <a href="historia-en.html">🇬🇧 English</a>
-  </div>
+</div>
 </nav>
-  </header>
-
+</header>
 <section id="history" style="padding: 40px 20px;">
-  <h2>History</h2>
-  <ul>
-    <li><strong>2014</strong> &nbsp; The idea of consolidating a company dedicated to specialized and professional quality services is born. The idea is solidified and operations begin as an individual entity.</li>
-    <li><strong>2015</strong> &nbsp; Operations continue and the administrative team grows in the commercial and engineering areas. Services are sold to internationally recognized companies.</li>
-    <li><strong>2017</strong> &nbsp; A department dedicated to entertainment and events is created.</li>
-    <li><strong>2018</strong> &nbsp; Efforts are consolidated to expand services nationwide with major companies, and more services are added to the catalog.</li>
-    <li><strong>2019</strong> &nbsp; The commercial name DYMIEC S.A. de C.V. is adopted for business purposes.</li>
-    <li><strong>2020</strong> &nbsp; Deals are closed with globally recognized companies. We continue with our company's special characteristic: customer service and trust in our services.</li>
-    <li><strong>2021</strong> &nbsp; We continue providing services to both large and small clients, as the company’s philosophy is that no job is too small — all work is equally important.</li>
-    <li><strong>2022</strong> &nbsp; Deals are finalized with companies like Pastes Kikos, Constructora FM, Chedraui, and Farmacias Similares for industrial supplies and construction of production plants.</li>
-    <li><strong>2023</strong> &nbsp; Currently, DYMIEC is still seeking new projects and services to offer, eager to grow as a company, striving to be the main supplier for major corporations — always focusing on customer satisfaction and well-being.</li>
-  </ul>
+<h2>History</h2>
+<ul>
+<li><strong>2014</strong>   The idea of consolidating a company dedicated to specialized and professional quality services is born. The idea is solidified and operations begin as an individual entity.</li>
+<li><strong>2015</strong>   Operations continue and the administrative team grows in the commercial and engineering areas. Services are sold to internationally recognized companies.</li>
+<li><strong>2017</strong>   A department dedicated to entertainment and events is created.</li>
+<li><strong>2018</strong>   Efforts are consolidated to expand services nationwide with major companies, and more services are added to the catalog.</li>
+<li><strong>2019</strong>   The commercial name DYMIEC S.A. de C.V. is adopted for business purposes.</li>
+<li><strong>2020</strong>   Deals are closed with globally recognized companies. We continue with our company's special characteristic: customer service and trust in our services.</li>
+<li><strong>2021</strong>   We continue providing services to both large and small clients, as the company’s philosophy is that no job is too small — all work is equally important.</li>
+<li><strong>2022</strong>   Deals are finalized with companies like Pastes Kikos, Constructora FM, Chedraui, and Farmacias Similares for industrial supplies and construction of production plants.</li>
+<li><strong>2023</strong>   Currently, DYMIEC is still seeking new projects and services to offer, eager to grow as a company, striving to be the main supplier for major corporations — always focusing on customer satisfaction and well-being.</li>
+</ul>
 </section>
-  <footer>
-    <p>© 2025 DYMIEC. All rights reserved.</p>
-  </footer>
-  <!-- Floating Buttons -->
-<a href="https://wa.me/5563015941" class="btn-float whatsapp" target="_blank" title="WhatsApp">
-  <img src="images/whatsapp.png" alt="WhatsApp">
+<footer>
+<p>© 2025 DYMIEC. All rights reserved.</p>
+</footer>
+<!-- Floating Buttons -->
+<a class="btn-float whatsapp" href="https://wa.me/5563015941" target="_blank" title="WhatsApp">
+<img alt="WhatsApp" src="images/whatsapp.png"/>
 </a>
-<a href="tel:5563015941" class="btn-float call" title="Call">
-  <img src="images/phone.png" alt="Call">
+<a class="btn-float call" href="tel:5563015941" title="Call">
+<img alt="Call" src="images/phone.png"/>
 </a>
-<a href="https://mail.google.com/mail/?view=cm&to=mmdymiec@outlook.es" target="_blank" class="btn-float email" title="Email">
-  <img src="images/email.png" alt="Email">
+<a class="btn-float email" href="https://mail.google.com/mail/?view=cm&amp;to=mmdymiec@outlook.es" target="_blank" title="Email">
+<img alt="Email" src="images/email.png"/>
 </a>
+
+<script>
+  function toggleMenu() {
+    const navList = document.querySelector('nav ul');
+    navList.classList.toggle('show');
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("nav ul li a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        const navList = document.querySelector("nav ul");
+        if (navList.classList.contains("show")) {
+          navList.classList.remove("show");
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>

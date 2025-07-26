@@ -1,18 +1,61 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contáctanos para mantenimiento y construcción en CDMX.">
-  <title>Contacto | DYMIEC</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Contáctanos para mantenimiento y construcción en CDMX." name="description"/>
+<title>Contacto | DYMIEC</title>
+<link href="styles.css" rel="stylesheet"/>
+<script async="" defer="" src="https://www.google.com/recaptcha/api.js"></script>
+
+<style>
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: black;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      z-index: 998;
+    }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+</style>
 </head>
 <body>
-  <header>
-    <img src="images/logo-dymiec.png" alt="Logo DYMIEC" style="height: 180px;">
-<nav>
-  <ul>
+<header>
+<img alt="Logo DYMIEC" src="images/logo-dymiec.png" style="height: 180px;"/>
+<div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div><nav>
+<ul>
 <li><a href="inicio.html">Inicio</a></li>
 <li><a href="servicios.html">Servicios</a></li>
 <li><a href="nosotros.html">Nosotros</a></li>
@@ -22,64 +65,72 @@
 <li><a href="historia.html">Historia</a></li>
 <li><a href="clientes.html">Clientes</a></li>
 <li><a href="blog.html">Blog</a></li>
-  </ul>
-
-
-    <div class="language-switcher" style="text-align:right; padding: 10px;">
-        <a href="contacto.html">🇲🇽 Español</a> | <a href="contacto-en.html">🇬🇧 English</a>
-    </div>
-
+</ul>
+<div class="language-switcher" style="text-align:right; padding: 10px;">
+<a href="contacto.html">🇲🇽 Español</a> | <a href="contacto-en.html">🇬🇧 English</a>
+</div>
 </nav>
-  </header>
-
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Ponemos a su disposición nuestros medios de contacto:</p>
-    <p><strong>Director de Proyectos:</strong> Miguel Angel Mendoza Morales.</p>
-    <p><strong>Teléfono:</strong> 5563015941</p>
-    <p><strong>Email:</strong> mmdymiec@outlook.es</p>
-    <p><a href="https://wa.me/5563015941" target="_blank">📱 Escríbenos por WhatsApp</a></p>
-    <p><a href="https://www.facebook.com/p/Dymiec-SA-de-CV-100063548168538/" target="_blank">📘 Síguenos en Facebook (más de 1,400 seguidores)</a></p>
-
-    <h3>Envíanos un mensaje</h3>
+</header>
+<section id="contacto">
+<h2>Contacto</h2>
+<p>Ponemos a su disposición nuestros medios de contacto:</p>
+<p><strong>Director de Proyectos:</strong> Miguel Angel Mendoza Morales.</p>
+<p><strong>Teléfono:</strong> 5563015941</p>
+<p><strong>Email:</strong> mmdymiec@outlook.es</p>
+<p><a href="https://wa.me/5563015941" target="_blank">📱 Escríbenos por WhatsApp</a></p>
+<p><a href="https://www.facebook.com/p/Dymiec-SA-de-CV-100063548168538/" target="_blank">📘 Síguenos en Facebook (más de 1,400 seguidores)</a></p>
+<h3>Envíanos un mensaje</h3>
 <form action="https://formsubmit.co/mmdymiec@outlook.es" method="POST">
-  <input type="text" name="nombre" placeholder="Tu nombre" required><br><br>
-  <input type="email" name="correo" placeholder="Tu correo electrónico" required><br><br>
-  <textarea name="mensaje" placeholder="Tu mensaje" rows="5" required></textarea><br><br>
-
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://dymiec.com.mx/gracias.html">
-  <input type="hidden" name="_autoresponse" value="Gracias por contactarnos en DYMIEC. Hemos recibido tu mensaje y te responderemos a la brevedad.">
-
-  <div class="g-recaptcha" data-sitekey="6Ldrto0rAAAAAILMJXeEiqu_dVB4lIfDdOl2UWpC"></div>
-  <br>
-  <button type="submit">Enviar</button>
+<input name="nombre" placeholder="Tu nombre" required="" type="text"/><br/><br/>
+<input name="correo" placeholder="Tu correo electrónico" required="" type="email"/><br/><br/>
+<textarea name="mensaje" placeholder="Tu mensaje" required="" rows="5"></textarea><br/><br/>
+<input name="_captcha" type="hidden" value="false"/>
+<input name="_next" type="hidden" value="https://dymiec.com.mx/gracias.html"/>
+<input name="_autoresponse" type="hidden" value="Gracias por contactarnos en DYMIEC. Hemos recibido tu mensaje y te responderemos a la brevedad."/>
+<div class="g-recaptcha" data-sitekey="6Ldrto0rAAAAAILMJXeEiqu_dVB4lIfDdOl2UWpC"></div>
+<br/>
+<button type="submit">Enviar</button>
 </form>
-  </section>
-
-  <footer>
-    <p>© 2025 DYMIEC. Todos los derechos reservados.</p>
-  </footer>
-
-  <!-- Botones flotantes -->
-  <a href="https://wa.me/5563015941" class="btn-float whatsapp" target="_blank" title="WhatsApp">
-    <img src="images/whatsapp.png" alt="WhatsApp">
-  </a>
-
-  <a href="tel:5563015941" class="btn-float call" title="Llamar">
-    <img src="images/phone.png" alt="Llamar">
-  </a>
-
-  <a href="https://mail.google.com/mail/?view=cm&to=mmdymiec@outlook.es" target="_blank" class="btn-float email" title="Correo">
-    <img src="images/email.png" alt="Correo">
-  </a>
-  <script>
+</section>
+<footer>
+<p>© 2025 DYMIEC. Todos los derechos reservados.</p>
+</footer>
+<!-- Botones flotantes -->
+<a class="btn-float whatsapp" href="https://wa.me/5563015941" target="_blank" title="WhatsApp">
+<img alt="WhatsApp" src="images/whatsapp.png"/>
+</a>
+<a class="btn-float call" href="tel:5563015941" title="Llamar">
+<img alt="Llamar" src="images/phone.png"/>
+</a>
+<a class="btn-float email" href="https://mail.google.com/mail/?view=cm&amp;to=mmdymiec@outlook.es" target="_blank" title="Correo">
+<img alt="Correo" src="images/email.png"/>
+</a>
+<script>
   document.querySelector("form").addEventListener("submit", function(e) {
     const response = grecaptcha.getResponse();
     if (response.length === 0) {
       e.preventDefault();
       alert("Por favor confirma que no eres un robot.");
     }
+  });
+</script>
+
+<script>
+  function toggleMenu() {
+    const navList = document.querySelector('nav ul');
+    navList.classList.toggle('show');
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("nav ul li a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        const navList = document.querySelector("nav ul");
+        if (navList.classList.contains("show")) {
+          navList.classList.remove("show");
+        }
+      });
+    });
   });
 </script>
 </body>

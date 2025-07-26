@@ -1,16 +1,59 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nosotros | DYMIEC</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nosotros | DYMIEC</title>
+<link href="styles.css" rel="stylesheet"/>
+
+<style>
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: black;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100%;
+      z-index: 998;
+    }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+</style>
 </head>
 <body>
-  <header>
-    <img src="images/logo-dymiec.png" alt="Logo DYMIEC" style="height: 180px;">
-    <nav>
-  <ul>
+<header>
+<img alt="Logo DYMIEC" src="images/logo-dymiec.png" style="height: 180px;"/>
+<div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div><nav>
+<ul>
 <li><a href="inicio.html">Inicio</a></li>
 <li><a href="servicios.html">Servicios</a></li>
 <li><a href="nosotros.html">Nosotros</a></li>
@@ -20,51 +63,62 @@
 <li><a href="historia.html">Historia</a></li>
 <li><a href="clientes.html">Clientes</a></li>
 <li><a href="blog.html">Blog</a></li>
-  </ul>
-
+</ul>
 <div class="language-switcher" style="text-align:right; padding: 10px;">
-  <a href="/nosotros.html">🇲🇽 Español</a> | <a href="/about-us.html">🇬🇧 English</a>
+<a href="/nosotros.html">🇲🇽 Español</a> | <a href="/about-us.html">🇬🇧 English</a>
 </div>
-
 </nav>
-  </header>
-
-  <section>
-    <h2>Nosotros</h2>
-
-    <h3>Misión</h3>
-    <p>Proveer servicios de construcción y mantenimiento industrial de alta calidad, utilizando mano de obra profesional y técnicas innovadoras, para satisfacer las necesidades de nuestros clientes y superar sus expectativas, mientras fomentamos un entorno de trabajo seguro y colaborativo para nuestros empleados.</p>
-
-    <h3>Visión</h3>
-    <p>Convertirnos en una empresa de referencia en construcción y mantenimiento industrial en México, reconocida por nuestra innovación, calidad y compromiso con el cliente, contribuyendo al desarrollo de infraestructuras seguras y eficientes.</p>
-
-    <h3>Propósito</h3>
-    <p>Transformar el sector industrial mediante soluciones innovadoras y sostenibles, mejorando la infraestructura y la calidad de vida de las comunidades a las que servimos.</p>
-
-    <h3>Valores</h3>
-    <ul class="valores">
-      <li><strong>Innovación:</strong> Fomentamos la creatividad y la adopción de nuevas tecnologías para ofrecer soluciones avanzadas y eficientes a nuestros clientes.</li>
-      <li><strong>Calidad:</strong> Nos comprometemos a entregar servicios y productos de la más alta calidad, superando las expectativas de nuestros clientes.</li>
-      <li><strong>Sostenibilidad:</strong> Promovemos prácticas responsables y sostenibles que minimicen el impacto ambiental y contribuyan al bienestar de las comunidades.</li>
-      <li><strong>Seguridad:</strong> Priorizamos la seguridad de nuestros empleados y clientes, asegurando un entorno de trabajo seguro y saludable.</li>
-      <li><strong>Integridad:</strong> Actuamos con honestidad y transparencia en todas nuestras operaciones, manteniendo altos estándares éticos.</li>
-      <li><strong>Colaboración:</strong> Valoramos el trabajo en equipo y la cooperación, tanto dentro de nuestra empresa como con nuestros clientes y socios.</li>
-      <li><strong>Responsabilidad:</strong> Asumimos la responsabilidad de nuestras acciones y decisiones, buscando siempre mejorar y aprender de nuestras experiencias.</li>
-    </ul>
-  </section>
-
-  <footer>
-    <p>© 2025 DYMIEC. Todos los derechos reservados.</p>
-  </footer>
-  <!-- Floating Buttons -->
-<a href="https://wa.me/5563015941" class="btn-float whatsapp" target="_blank" title="WhatsApp">
-  <img src="images/whatsapp.png" alt="WhatsApp">
+</header>
+<section>
+<h2>Nosotros</h2>
+<h3>Misión</h3>
+<p>Proveer servicios de construcción y mantenimiento industrial de alta calidad, utilizando mano de obra profesional y técnicas innovadoras, para satisfacer las necesidades de nuestros clientes y superar sus expectativas, mientras fomentamos un entorno de trabajo seguro y colaborativo para nuestros empleados.</p>
+<h3>Visión</h3>
+<p>Convertirnos en una empresa de referencia en construcción y mantenimiento industrial en México, reconocida por nuestra innovación, calidad y compromiso con el cliente, contribuyendo al desarrollo de infraestructuras seguras y eficientes.</p>
+<h3>Propósito</h3>
+<p>Transformar el sector industrial mediante soluciones innovadoras y sostenibles, mejorando la infraestructura y la calidad de vida de las comunidades a las que servimos.</p>
+<h3>Valores</h3>
+<ul class="valores">
+<li><strong>Innovación:</strong> Fomentamos la creatividad y la adopción de nuevas tecnologías para ofrecer soluciones avanzadas y eficientes a nuestros clientes.</li>
+<li><strong>Calidad:</strong> Nos comprometemos a entregar servicios y productos de la más alta calidad, superando las expectativas de nuestros clientes.</li>
+<li><strong>Sostenibilidad:</strong> Promovemos prácticas responsables y sostenibles que minimicen el impacto ambiental y contribuyan al bienestar de las comunidades.</li>
+<li><strong>Seguridad:</strong> Priorizamos la seguridad de nuestros empleados y clientes, asegurando un entorno de trabajo seguro y saludable.</li>
+<li><strong>Integridad:</strong> Actuamos con honestidad y transparencia en todas nuestras operaciones, manteniendo altos estándares éticos.</li>
+<li><strong>Colaboración:</strong> Valoramos el trabajo en equipo y la cooperación, tanto dentro de nuestra empresa como con nuestros clientes y socios.</li>
+<li><strong>Responsabilidad:</strong> Asumimos la responsabilidad de nuestras acciones y decisiones, buscando siempre mejorar y aprender de nuestras experiencias.</li>
+</ul>
+</section>
+<footer>
+<p>© 2025 DYMIEC. Todos los derechos reservados.</p>
+</footer>
+<!-- Floating Buttons -->
+<a class="btn-float whatsapp" href="https://wa.me/5563015941" target="_blank" title="WhatsApp">
+<img alt="WhatsApp" src="images/whatsapp.png"/>
 </a>
-<a href="tel:5563015941" class="btn-float call" title="Call">
-  <img src="images/phone.png" alt="Call">
+<a class="btn-float call" href="tel:5563015941" title="Call">
+<img alt="Call" src="images/phone.png"/>
 </a>
-<a href="https://mail.google.com/mail/?view=cm&to=mmdymiec@outlook.es" target="_blank" class="btn-float email" title="Email">
-  <img src="images/email.png" alt="Email">
+<a class="btn-float email" href="https://mail.google.com/mail/?view=cm&amp;to=mmdymiec@outlook.es" target="_blank" title="Email">
+<img alt="Email" src="images/email.png"/>
 </a>
+
+<script>
+  function toggleMenu() {
+    const navList = document.querySelector('nav ul');
+    navList.classList.toggle('show');
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("nav ul li a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        const navList = document.querySelector("nav ul");
+        if (navList.classList.contains("show")) {
+          navList.classList.remove("show");
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>
