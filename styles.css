@@ -276,3 +276,46 @@ body::before {
   text-align: right;
   padding: 10px;
 }
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: black;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    z-index: 998;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li a {
+    color: black !important;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
