@@ -174,13 +174,18 @@
     });
   });
 </script>
-<!-- Advanced cookie notice (EN) -->
-<div id="cookie-banner" style="position:fixed;bottom:0;left:0;width:100%;background:#222;color:white;text-align:center;padding:15px;font-size:14px;z-index:9999;display:none;">
-  We use our own and third-party cookies to collect statistical data on user browsing and improve our services. 
-  <a href="cookies-en.html" style="color:#ffe761; text-decoration:underline; margin-left:5px;">Read more</a>
-  <br><br>
-  <button onclick="acceptCookies()" style="margin-right:10px;padding:6px 12px;">Accept all cookies</button>
-  <button onclick="rejectCookies()" style="padding:6px 12px;">Reject all cookies</button>
+<!-- Responsive cookie banner (EN) -->
+<div id="cookie-banner" style="position:fixed;bottom:0;left:0;width:100%;background:#222;color:white;text-align:center;padding:15px;font-size:14px;z-index:9999;display:none;box-sizing:border-box;">
+  <div style="max-width:960px;margin:auto;padding:0 15px;">
+    <p style="margin:0;">
+      We use our own and third-party cookies to collect statistical data on our users' browsing and to improve our services. 
+      <a href="cookies-en.html" style="color:#ffe761; text-decoration:underline;">Learn more</a>
+    </p>
+    <div style="margin-top:10px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;">
+      <button onclick="acceptCookies()" style="padding:8px 16px;border:none;border-radius:4px;background:#007bff;color:white;">Accept all cookies</button>
+      <button onclick="rejectCookies()" style="padding:8px 16px;border:none;border-radius:4px;background:#6c757d;color:white;">Reject all cookies</button>
+    </div>
+  </div>
 </div>
 
 <script>
