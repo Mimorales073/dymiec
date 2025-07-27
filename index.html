@@ -112,5 +112,24 @@
     });
   });
 </script>
+<!-- Aviso de cookies con memoria (ES) -->
+<div id="cookie-banner" style="position:fixed;bottom:0;left:0;width:100%;background:#222;color:white;text-align:center;padding:10px;font-size:14px;z-index:9999;display:none;">
+  Usamos cookies para mejorar tu experiencia.
+  <button onclick="aceptarCookies()" style="margin-left:10px;padding:5px 10px;">Aceptar</button>
+</div>
+
+<script>
+  function aceptarCookies() {
+    document.getElementById("cookie-banner").style.display = "none";
+    localStorage.setItem("cookiesAceptadas", "true");
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    if (!localStorage.getItem("cookiesAceptadas")) {
+      document.getElementById("cookie-banner").style.display = "block";
+    }
+  });
+</script>
+
 </body>
 </html>
