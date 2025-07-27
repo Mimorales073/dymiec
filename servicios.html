@@ -144,5 +144,33 @@
     });
   });
 </script>
+<!-- Aviso de cookies avanzado (ES) -->
+<div id="cookie-banner" style="position:fixed;bottom:0;left:0;width:100%;background:#222;color:white;text-align:center;padding:15px;font-size:14px;z-index:9999;display:none;">
+  Utilizamos cookies propias y de terceros para obtener datos estadísticos de la navegación de nuestros usuarios y mejorar nuestros servicios. 
+  <a href="cookies.html" style="color:#ffe761; text-decoration:underline; margin-left:5px;">Leer más información</a>
+  <br><br>
+  <button onclick="aceptarCookies()" style="margin-right:10px;padding:6px 12px;">Aceptar todas las cookies</button>
+  <button onclick="rechazarCookies()" style="padding:6px 12px;">Rechazar todas las cookies</button>
+</div>
+
+<script>
+  function aceptarCookies() {
+    localStorage.setItem("cookiesPreferencia", "aceptadas");
+    document.getElementById("cookie-banner").style.display = "none";
+  }
+
+  function rechazarCookies() {
+    localStorage.setItem("cookiesPreferencia", "rechazadas");
+    document.getElementById("cookie-banner").style.display = "none";
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const pref = localStorage.getItem("cookiesPreferencia");
+    if (!pref) {
+      document.getElementById("cookie-banner").style.display = "block";
+    }
+  });
+</script>
+
 </body>
 </html>
